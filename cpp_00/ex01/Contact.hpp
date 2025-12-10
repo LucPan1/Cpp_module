@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:31:31 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/04 16:32:47 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/10 17:35:17 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,6 @@ class Contact {
 		void	setNickname(std::string nickname);
 		void	setPhoneNumber(std::string phone_number);
 		void	setDarkestSecret(std::string darkest_secret);
-
-		void	add(std::string first_name, std::string last_name, std::string nickname,
-				std::string phoneNumber, std::string darkest_secret);
-
     
     private:
 		std::string	_first_name;
