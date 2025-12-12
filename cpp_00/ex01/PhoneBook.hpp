@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:01:25 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/10 17:47:00 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/11 15:01:47 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 #include <iostream>
 #include <iomanip> 
 #include <cstdlib>
-#include <cstring> 
+#include <cstring>
 #include <vector>
+#include <ios>
 
 class PhoneBook {
     
@@ -26,14 +27,14 @@ class PhoneBook {
         PhoneBook( void );
         ~PhoneBook( void );
 
-        void	add_contact(int index);
-        void	search_contact(int i);
+        void			add_contact(int index);
+        void			search_contact(int i);
 
-        bool	is_number(const std::string& s);
+        bool			is_number(const std::string& s);
+        std::string&	truncate(std::string& str, size_t width);
 
     private:
         Contact _contacts[8];
-        // int		_index;
 };
 
 #endif
