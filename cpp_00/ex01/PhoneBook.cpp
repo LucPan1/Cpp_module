@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:59:51 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/10 17:53:32 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/12 16:54:42 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,16 @@ void	PhoneBook::add_contact(int index)
 	}
 }
 
+std::string& PhoneBook::truncate(std::string& str, size_t width) {
+	
+    if (str.length() > width) 
+	{
+		str.resize(width);
+		return str.append(".");
+    }
+    return str;
+}
+
 void	PhoneBook::search_contact(int index)
 {
 	int	i = 0;
@@ -98,17 +108,25 @@ void	PhoneBook::search_contact(int index)
 	std::cout << "|";
 	std::cout << std::right << std::setw(10) << "Nickname";
 	std::cout << "|";
+
+	std::string	firstname;
+	std::string	lastname;
+	std::string	nickname;
+	
 	while (i < index)
 	{
+		firstname = this->_contacts[i].getFirstName();
+		lastname = this->_contacts[i].getLastName();
+		nickname = this->_contacts[i].getNickname();
 		std::cout << std::endl;
 		std::cout << "|";
 		std::cout << std::right << std::setw(10) << i;
 		std::cout << "|";
-		std::cout << std::right << std::setw(10) << this->_contacts[i].getFirstName();
+		std::cout << std::right << std::setw(10) << truncate(firstname, 9);
 		std::cout << "|";
-		std::cout << std::right << std::setw(10) << this->_contacts[i].getLastName();
+		std::cout << std::right << std::setw(10) << truncate(lastname, 9);
 		std::cout << "|";
-		std::cout << std::right << std::setw(10) << this->_contacts[i].getNickname();
+		std::cout << std::right << std::setw(10) << truncate(nickname, 9);
 		std::cout << "|";
 		i++;
 	}
@@ -119,6 +137,12 @@ void	PhoneBook::search_contact(int index)
 	std::string	input_index;
 	
 	getline(std::cin, input_index);
+	while (atoi(input_index.c_str()) > 7 || !(is_number(input_index)))
+	{
+		std::cout << std::endl;
+		std::cout << "Invalid index, please try again: "; 
+		getline(std::cin, input_index);
+	}
 	std::cout << std::endl;
 	std::cout << "Firstname: ";
 	std::cout << this->_contacts[atoi(input_index.c_str())].getFirstName() << std::endl;
