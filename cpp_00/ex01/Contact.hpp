@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:31:31 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/10 17:35:17 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/14 22:39:25 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Contact {
     
     public:
-        Contact(void);
+        Contact();
         ~Contact(void);
 
 		std::string getFirstName( void ) const;

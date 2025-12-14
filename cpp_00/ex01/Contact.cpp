@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:34:01 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/09 16:02:13 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/14 22:40:12 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact( void )
+Contact::Contact() : _first_name(), _last_name(), _nickname(), _phone_number(), _darkest_secret()
 {
     std::cout << "Contact Constructor called" << std::endl;
     return;
