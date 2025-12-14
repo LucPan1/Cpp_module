@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:54:10 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/12 17:16:27 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/14 17:51:05 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
-
-// getLineProtected(input);
-
-// void getLineProtected(std::string& buff) {
-// 	std::getline(std::cin, buff);
-// }
+#include "Utils.hpp"
 
 int main()
 {
@@ -39,7 +34,7 @@ int main()
 		std::cout << "=============================" << std::endl;
 		std::cout << std::endl;
 		std::cout << "Enter a command: ";
-		getline(std::cin, command);
+		getLineProtected(command);
 		if (command == "1" || command.compare("ADD") == 0)
 		{
 			if (index == 8 && i == 8)

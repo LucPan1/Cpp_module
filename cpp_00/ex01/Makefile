@@ -5,7 +5,8 @@ NAME = phonebook
 
 SRC = main.cpp \
 	  Contact.cpp \
-	  PhoneBook.cpp
+	  PhoneBook.cpp \
+	  Utils.cpp \
 
 OBJS = $(SRC:.cpp=.o)
 

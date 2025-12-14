@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:59:51 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/12 16:54:42 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/14 22:12:42 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include "Utils.hpp"
 
 PhoneBook::PhoneBook( void )
 {
@@ -39,43 +40,53 @@ void	PhoneBook::add_contact(int index)
 	while (true)
 	{
 		std::cout << "Firstname: ";
-		getline(std::cin, input);
-		while (input.empty()) 
+		getLineProtected(input);
+		std::size_t found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		while (input.empty() || found != std::string::npos) 
 		{
 			std::cout << "Re-enter firstname: ";
-			getline(std::cin, input);
+			getLineProtected(input);
+			found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
 		}
 		this->_contacts[index].setFirstName(input);
 		std::cout << "Lastname: ";
-		getline(std::cin, input);
-		while (input.empty()) 
+		getLineProtected(input);
+		found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		std::cout << input << std::endl;
+		while (input.empty() || found != std::string::npos) 
 		{
 			std::cout << "Re-enter lastname: "; 
-			getline(std::cin, input);
+			getLineProtected(input);
+			found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
 		}
 		this->_contacts[index].setLastName(input);
 		std::cout << "Nickname: ";
-		getline(std::cin, input);
-		while (input.empty()) 
+		getLineProtected(input);
+		found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		while (input.empty() || found != std::string::npos) 
 		{
 			std::cout << "Re-enter nickname: "; 
-			getline(std::cin, input);
+			getLineProtected(input);
+			found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
 		}
 		this->_contacts[index].setNickname(input);
 		std::cout << "Phone number: ";
-		getline(std::cin, input);
+		getLineProtected(input);
 		while (input.empty() || !(is_number(input))) 
 		{
 			std::cout << "Re-enter phone number: "; 
-			getline(std::cin, input);
+			getLineProtected(input);
 		}
 		this->_contacts[index].setPhoneNumber(input);
 		std::cout << "darkest secret: ";
-		getline(std::cin, input);
-		while (input.empty()) 
+		getLineProtected(input);
+		found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		while (input.empty() || found != std::string::npos) 
 		{
 			std::cout << "Re-enter darkest_secret: "; 
-			getline(std::cin, input);
+			getLineProtected(input);
+			found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
 		}
 		this->_contacts[index].setDarkestSecret(input);
 		std::cout << std::endl;
@@ -136,12 +147,12 @@ void	PhoneBook::search_contact(int index)
 	
 	std::string	input_index;
 	
-	getline(std::cin, input_index);
+	getLineProtected(input_index);
 	while (atoi(input_index.c_str()) > 7 || !(is_number(input_index)))
 	{
 		std::cout << std::endl;
 		std::cout << "Invalid index, please try again: "; 
-		getline(std::cin, input_index);
+		getLineProtected(input_index);
 	}
 	std::cout << std::endl;
 	std::cout << "Firstname: ";
