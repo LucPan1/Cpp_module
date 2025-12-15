@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.cpp                                          :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/14 16:59:42 by luc               #+#    #+#             */
-/*   Updated: 2025/12/15 12:00:33 by lupan            ###   ########.fr       */
+/*   Created: 2025/12/15 11:54:27 by lupan             #+#    #+#             */
+/*   Updated: 2025/12/15 14:44:21 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Utils.hpp"
+#include "Account.hpp"
 
-void getLineProtected(std::string& buff) {
-	
-	if (!std::getline(std::cin, buff))
-	{
-		std::cout << std::endl;
-		exit(0);
-	}
+int	Account::getNbAccounts( void )
+{
+    return _nbAccounts;
 }
+
+int	Account::getTotalAmount( void )
+{
+	return _totalAmount;
+}
+
+int	Account::getNbDeposits( void )
+{
+	return _totalNbDeposits;
+}
+
+int	Account::getNbWithdrawals( void )
+{
+	return _totalNbWithdrawals;
+}
+
+// int	Account::getNbDeposits( void )
+// {
+//     return _totalNbDeposits += _nbDeposits;
+// }

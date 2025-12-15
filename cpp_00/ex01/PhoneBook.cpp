@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:59:51 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/14 22:12:42 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/15 11:49:27 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	PhoneBook::add_contact(int index)
 		std::cout << "Lastname: ";
 		getLineProtected(input);
 		found = input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-		std::cout << input << std::endl;
 		while (input.empty() || found != std::string::npos) 
 		{
 			std::cout << "Re-enter lastname: "; 
