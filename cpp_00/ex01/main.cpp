@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:54:10 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/14 17:51:05 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/18 16:58:19 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,7 @@ int main()
 		int res = command.compare("EXIT");
 		if (res == 0)
 			break;
-		std::cout << std::endl;
-		std::cout << "=============================" << std::endl;
-		std::cout << "1. ADD | 2. SEARCH | 3. EXIT" << std::endl;
-		std::cout << "=============================" << std::endl;
-		std::cout << std::endl;
-		std::cout << "Enter a command: ";
+		display_choice();
 		getLineProtected(command);
 		if (command == "1" || command.compare("ADD") == 0)
 		{
@@ -51,7 +46,7 @@ int main()
 		else
 		{
 			std::cout << std::endl;
-			std::cout << "Invalid command" << std::endl;
+			std::cout << "Invalid command, try again" << std::endl;
 		}
 	}
     return (0);

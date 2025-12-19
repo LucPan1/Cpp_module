@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:01:25 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/15 11:48:25 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/19 01:14:49 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 # define PHONEBOOK_CLASS_H
 
 #include "Contact.hpp"
-#include <iostream>
-#include <iomanip> 
-#include <cstdlib>
-#include <cstring>
-#include <vector>
-#include <cstddef> 
+#include "Utils.hpp"
+#include <iostream> // output | input
+#include <iomanip> // setw
+#include <cstdlib> // atoi | exit
+#include <string> // substr
 
 class PhoneBook {
     
@@ -30,9 +29,11 @@ class PhoneBook {
         void			add_contact(int index);
         void			search_contact(int i);
 
-        bool			is_number(const std::string& s);
+        void	        check_number(std::string input);
         std::string&	truncate(std::string& str, size_t width);
-
+        void			display_infos(int i, std::string firstname, std::string lastname, std::string nickname);
+		void			display_index(std::string& input_index);
+		
     private:
         Contact _contacts[8];
 };
