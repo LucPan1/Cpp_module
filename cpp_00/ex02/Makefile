@@ -3,7 +3,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = account
 
-SRC = test.cpp \
+SRC = Account.cpp \
+	  tests.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
