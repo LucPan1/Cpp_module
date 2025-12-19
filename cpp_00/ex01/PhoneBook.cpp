@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:59:51 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/19 01:29:04 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/19 12:35:37 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 PhoneBook::PhoneBook( void )
 {
-    std::cout << "PhoneBook Constructor called" << std::endl;
+    // std::cout << "PhoneBook Constructor called" << std::endl;
     return;
 }
 
 PhoneBook::~PhoneBook( void )
 {
-    std::cout << "PhoneBook Destructor called" << std::endl;
+    // std::cout << "PhoneBook Destructor called" << std::endl;
     return;
 }
 
@@ -66,13 +66,11 @@ void	PhoneBook::add_contact(int index)
 	}
 }
 
-std::string& PhoneBook::truncate(std::string& str, size_t width) {
+std::string PhoneBook::truncate(std::string& str, size_t width) {
 	
     if (str.length() > width) 
 	{
-		str.substr(0, 9);
-		str.append(".");
-		return str;
+		return str.substr(0, 9) + ".";
     }
     return str;
 }
@@ -91,14 +89,14 @@ void	PhoneBook::display_infos(int i, std::string firstname, std::string lastname
 	std::cout << "|";
 }
 
-void	PhoneBook::display_index(std::string &input_index)
+void	PhoneBook::display_index(std::string &input_index, int index)
 {
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << "Enter contact index: ";
-	
+
 	getLineProtected(input_index);
-	while (std::atoi(input_index.c_str()) > 7 || !(is_number(input_index)))
+	while (std::atoi((input_index.c_str())) > index - 1 || !(is_number(input_index)))
 	{
 		std::cout << std::endl;
 		std::cout << "Invalid index, please try again: "; 
@@ -114,6 +112,12 @@ void	PhoneBook::search_contact(int index)
 	std::string input_index;
 	int			i = 0;
 	
+	if (index == 0)
+	{
+		std::cout << std::endl;
+		std::cout << "Contact is empty." << std::endl;
+		return;
+	}
 	display_column_info();
 	while (i < index)
 	{
@@ -123,7 +127,7 @@ void	PhoneBook::search_contact(int index)
 		display_infos(i, firstname, lastname, nickname);
 		i++;
 	}
-	display_index(input_index);
+	display_index(input_index, index);
 	std::cout << std::endl;
 	std::cout << "Firstname: ";
 	std::cout << this->_contacts[atoi(input_index.c_str())].getFirstName() << std::endl;

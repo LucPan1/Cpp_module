@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:54:10 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/18 16:58:19 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/19 12:39:08 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,8 @@ int main()
 	
 	index = 0;
 	i = 0;
-	while (command != "3")
+	while (true)
 	{
-		int res = command.compare("EXIT");
-		if (res == 0)
-			break;
 		display_choice();
 		getLineProtected(command);
 		if (command == "1" || command.compare("ADD") == 0)
@@ -43,6 +40,8 @@ int main()
 		{
 			phone.search_contact(index);
 		}
+		else if (command == "3" || command.compare("EXIT") == 0)
+			break;
 		else
 		{
 			std::cout << std::endl;
