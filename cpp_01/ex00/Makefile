@@ -4,6 +4,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = brain
 
 SRC = main.cpp \
+	  Zombie.cpp \
+	  newZombie.cpp \
+	  randomChump.cpp
 
 OBJS = $(SRC:.cpp=.o)
 

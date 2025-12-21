@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:25 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/19 16:46:13 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/22 00:01:27 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int	main()
 {
+	Zombie zombie("Foo");
+
+	zombie.randomChump("");
+	zombie.newZombie(zombie.getZombie());
 	return 0;
 }

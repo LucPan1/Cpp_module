@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:33 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/19 16:44:10 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/21 23:55:16 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie() 
+Zombie::Zombie(std::string name) : _name(name)
 {
 	std::cout << "Zombie constructor called" << std::endl;
 	return;
@@ -29,8 +29,8 @@ std::string Zombie::getZombie()
 	return this->_name;
 }
 
-void	announce()
+void	Zombie::announce()
 {
-	std::cout << "BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << getZombie() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
