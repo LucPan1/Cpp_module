@@ -6,15 +6,13 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:29 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/21 23:32:47 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/22 14:37:41 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie*	Zombie::newZombie(std::string name)
+Zombie*	newZombie(std::string name)
 {
-    Zombie* z = new Zombie(name);
-
-    return z;
+    return new Zombie(name);
 }

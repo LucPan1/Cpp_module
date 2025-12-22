@@ -6,15 +6,15 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:31 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/21 23:22:05 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/22 14:38:45 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::randomChump(std::string name)
+void	randomChump(std::string name)
 {
 	Zombie z = Zombie(name);
 
-    announce();
+    z.announce();
 }

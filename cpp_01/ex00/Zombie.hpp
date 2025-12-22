@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:35 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/21 23:26:32 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/22 14:28:44 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ class Zombie {
 		~Zombie();
 
 		std::string	getZombie();
-		void		randomChump(std::string name);
-		Zombie*		newZombie(std::string name);
 		void		announce(void);
 	
 	private:
