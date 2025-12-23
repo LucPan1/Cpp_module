@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 12:19:37 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/23 12:26:02 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/23 14:56:15 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 int main()
 {
-    return 0;
+    int N = 5;
+
+    Zombie *z = zombieHorde(N, "Foo");
+    while (N--)
+        z[N].announce();
+
+    delete [] z;
+    return (0);
 }
