@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:33 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/22 14:34:40 by luc              ###   ########.fr       */
+/*   Updated: 2025/12/23 12:28:54 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,8 @@ Zombie::~Zombie()
 	return;
 }
 
-std::string Zombie::getZombie()
-{
-	return this->_name;
-}
-
 void	Zombie::announce()
 {
-	std::cout << getZombie() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
