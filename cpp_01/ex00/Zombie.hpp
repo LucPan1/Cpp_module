@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 15:39:35 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/23 12:29:07 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/23 14:49:10 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ class Zombie {
 	private:
 		std::string _name;
 };
+
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
