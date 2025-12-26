@@ -6,14 +6,15 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 16:04:09 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/23 16:13:22 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/26 16:40:56 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon()
+Weapon::Weapon(std::string type): _type(type)
 {
+	this->_type = type;
 	std::cout << "Weapon Contructor called" << std::endl;
 	return;
 }

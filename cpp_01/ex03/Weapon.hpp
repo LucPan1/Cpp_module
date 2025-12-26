@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 16:04:13 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/23 16:13:58 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/26 15:48:42 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Weapon {
     
     public:
-        Weapon();
+        Weapon(std::string type);
         ~Weapon();
 
         std::string getType();
