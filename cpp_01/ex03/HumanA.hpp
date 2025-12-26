@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 16:03:54 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/23 16:43:23 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/26 14:44:45 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 # define HUMAN_A_HPP
 
 #include "Weapon.hpp"
-
-#include <iostream>
-#include <string>
 
 class HumanA {
     
