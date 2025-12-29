@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = horde
+NAME = weapon
 
 SRC = main.cpp \
 	  Weapon.cpp \

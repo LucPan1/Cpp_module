@@ -6,15 +6,14 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 16:03:57 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/26 16:58:35 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/29 15:39:08 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): _name(name)
+HumanB::HumanB(std::string name): _name(name), _weapon(NULL)
 {
-	this->_name = name;
     std::cout << "HumanB Constructor called" << std::endl;
     return;
 }
@@ -27,16 +26,10 @@ HumanB::~HumanB()
 
 void	HumanB::attack() 
 {
-	Weapon *weapon;
-
-	std::cout << this->_name << "attacks with their " << weapon->getType() << std::endl;
+	std::cout << this->_name << " attacks with their " << _weapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon type)
+void	HumanB::setWeapon(Weapon &type)
 {
-	std::string name;
-
-	type.setType(name);
-	Weapon &weapon = type;
-
+	this->_weapon = &type;
 }

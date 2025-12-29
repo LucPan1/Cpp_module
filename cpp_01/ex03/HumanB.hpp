@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 16:04:00 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/26 16:58:15 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/29 15:39:18 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ class HumanB {
         ~HumanB();
 
 		void	attack();
-		void	setWeapon(Weapon type);
+		void	setWeapon(Weapon &type);
     
     private:
         std::string	_name;
+        Weapon      *_weapon;
         
 };
 
