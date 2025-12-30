@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = sed
+NAME = rep
 
 SRC = main.cpp \
 

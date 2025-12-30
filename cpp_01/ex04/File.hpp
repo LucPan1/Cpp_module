@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 16:24:54 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/29 16:27:35 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/30 15:03:10 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 # define FILE_HPP
 
 #include <fstream>
+#include <iostream>
+#include <ios>
 
 #endif
