@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 16:24:54 by lupan             #+#    #+#             */
-/*   Updated: 2025/12/30 15:03:10 by lupan            ###   ########.fr       */
+/*   Updated: 2025/12/31 15:36:46 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 #include <fstream>
 #include <iostream>
 #include <ios>
+#include <string>
 
 #endif
