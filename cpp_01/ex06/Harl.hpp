@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 23:26:39 by luc               #+#    #+#             */
-/*   Updated: 2026/01/05 00:22:30 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/05 15:16:34 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,13 @@ class Harl {
         Harl();
         ~Harl();
     
-    	void	complain(std::string level, int lvl);
+    	void	complain(std::string level);
+
+    private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 
 };
 
