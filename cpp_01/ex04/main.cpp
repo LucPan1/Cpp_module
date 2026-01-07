@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 15:41:42 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/03 19:43:49 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/07 12:30:42 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int ft_replace(char **av)
 			}
 			out_file << line[i];
 			i++;
-			if (i == line.length())
+			if (i == line.length() && filein.peek() != EOF)
 				out_file << std::endl;
 		}
 	}
