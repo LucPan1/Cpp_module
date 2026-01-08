@@ -3,20 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:39:57 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/07 16:50:57 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/09 00:45:55 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
+#include <iostream>
+
 class Fixed {
 
     public:
-        Fixed();
+        Fixed(const int fixed_point_number);
+        Fixed(const double fixed_point_number);
         Fixed(const Fixed& other);
         Fixed &operator=(const Fixed& other);
         ~Fixed();
@@ -25,7 +28,8 @@ class Fixed {
         int		toInt(void) const; 
     
     private:
-        static const int _fractional_bits;
-}
+        int					_fixed_point_number;
+        static const int	_fractional_bits;
+};
 
 #endif
