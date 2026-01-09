@@ -18,6 +18,7 @@
 class Fixed {
 
     public:
+        Fixed();
         Fixed(const int fixed_point_number);
         Fixed(const double fixed_point_number);
         Fixed(const Fixed& other);
