@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = conversion
+NAME = a.out
 
 SRC = main.cpp \
 	  Fixed.cpp 
