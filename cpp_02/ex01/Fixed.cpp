@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:39:54 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/10 20:44:58 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/11 23:25:16 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const int fixed_point_number): _fixed_point_number(0)
     return;
 }
 
-Fixed::Fixed(const double fixed_point_number): _fixed_point_number(0)
+Fixed::Fixed(const float fixed_point_number): _fixed_point_number(0)
 {
     setRawBits((int)roundf(fixed_point_number * (1 << _fractional_bits)));
     std::cout << "Fixed Float Constructor called" << std::endl;
