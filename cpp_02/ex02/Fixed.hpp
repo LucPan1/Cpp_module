@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:32:19 by luc               #+#    #+#             */
-/*   Updated: 2026/01/11 20:20:19 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/11 23:25:50 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed {
     public:
         Fixed();
         Fixed(const int fixed_point_number);
-        Fixed(const double fixed_point_number);
+        Fixed(const float fixed_point_number);
         Fixed(const Fixed& other);
         Fixed &operator=(const Fixed& other);
         ~Fixed();
