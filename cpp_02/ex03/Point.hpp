@@ -21,7 +21,7 @@ class Point {
 
     public:
 		Point();
-		Point(const float fixed_point, const float fixed_point2);
+		Point(const float x, const float y);
 		Point(const Point& other);
 		Point& operator=(const Point& other);
 		~Point();
