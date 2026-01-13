@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 23:09:16 by luc               #+#    #+#             */
-/*   Updated: 2026/01/11 23:45:10 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/13 23:29:21 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ class Point {
 		Fixed const _y;
 
 };
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif

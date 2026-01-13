@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 23:08:07 by luc               #+#    #+#             */
-/*   Updated: 2026/01/11 23:35:13 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/13 23:17:34 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Point::Point(const float x, const float y): _x(x), _y(y)
     return;
 }
 
-Point::Point(const Point& other): _x(src._x), _y(src._y)
+Point::Point(const Point& other): _x(other._x), _y(other._y)
 {
     std::cout << "Point Copy Constructor called" << std::endl;
     *this = other;
@@ -46,12 +46,12 @@ Point::~Point()
     return;
 }
 
-Point::getX() const
+Fixed Point::getX() const
 {
     return this->_x;
 }
 
-Point::getY() const
+Fixed Point::getY() const
 {
     return this->_y;
 }
