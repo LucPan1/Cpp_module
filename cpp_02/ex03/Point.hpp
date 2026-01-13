@@ -26,9 +26,12 @@ class Point {
 		Point& operator=(const Point& other);
 		~Point();
 
+		Fixed getX() const;
+		Fixed getY() const;
+
 	private:
-		Fixed _x;
-		Fixed _y;
+		Fixed const _x;
+		Fixed const _y;
 
 };
 
