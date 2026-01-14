@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 15:53:26 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/14 23:35:17 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/14 23:36:25 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ void    ClapTrap::takeDamage(unsigned int amount)
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
+    this->_energy_point--;
     this->_hit_point += amount;
 }
