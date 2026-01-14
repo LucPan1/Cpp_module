@@ -1,12 +1,10 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = a.out
+NAME = ClapTrap
 
 SRC = main.cpp \
-	  Fixed.cpp \
-	  bsp.cpp \
-	  Point.cpp
+	  ClapTrap.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
