@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:39:54 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/11 23:25:16 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/16 00:05:14 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(const float fixed_point_number): _fixed_point_number(0)
     return;
 }
 
-Fixed::Fixed(const Fixed& other): _fixed_point_number(other._fixed_point_number)
+Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Fixed Copy Constructor called" << std::endl;
     *this = other;
