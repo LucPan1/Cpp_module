@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:53:40 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/06 17:40:29 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/16 00:03:48 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed(): _fixed_point_number(0)
     return;
 }
 
-Fixed::Fixed(const Fixed& other): _fixed_point_number(other._fixed_point_number)
+Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Fixed Copy Constructor called" << std::endl;
     *this = other;
@@ -38,7 +38,7 @@ Fixed &Fixed::operator=(const Fixed& other)
 
 Fixed::~Fixed()
 {
-    std::cout << "Destructor Fixed called" << std::endl;
+    std::cout << "Fixed Destructor called" << std::endl;
     return;
 }
 
