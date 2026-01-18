@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:53:54 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/16 16:00:38 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/18 19:19:57 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
 class DiamondTrap: public FragTrap, public ScavTrap {
     
     public:
-        
+        void	whoAmI();
+    
+    private:
+        std::string _name;
 };
 
 #endif

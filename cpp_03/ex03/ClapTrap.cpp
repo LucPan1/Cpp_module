@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:53:37 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/16 15:53:40 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/18 19:28:12 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _name(), _hit_point(100), _energy_point(100), _attack_damage(30)
+ClapTrap::ClapTrap(): _name(), _hit_point(100), _energy_point(50), _attack_damage(30)
 {
     std::cout << "ClapTrap Default Constructor called" << std::endl;
     return;

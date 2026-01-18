@@ -3,10 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:53:51 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/16 15:54:42 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/18 19:26:13 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "DiamondTrap.hpp"
+
+void    DiamondTrap::whoAmI()
+{
+    std::cout << "I am" << this->_name << "and my ClapTrap name is " << std::endl;
+}
