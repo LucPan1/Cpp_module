@@ -6,13 +6,13 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:55:55 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/15 15:33:01 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/19 15:36:39 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
     std::cout << "ScavTrap Default Constructor called" << std::endl;
     return;
