@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 15:53:26 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/14 23:36:25 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/21 16:49:00 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(): _name(), _hit_point(10), _energy_point(10), _attack_damage
 
 ClapTrap::ClapTrap(std::string name): _name(name)
 {
-    std::cout << "ClapTrap Constructor called" << std::endl;
+    std::cout << "ClapTrap Constructor Parameter called" << std::endl;
     return;
 }
 
@@ -32,8 +32,11 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap& other)
 {
-    if (this == &other) {
-        return (*this);
+    if (this != &other) {
+        _name = other._name;
+        _attack_damage = other._attack_damage;
+        _energy_point = other._energy_point;
+        _hit_point = other._hit_point;
     }
     return (*this);
 }
@@ -46,7 +49,13 @@ ClapTrap::~ClapTrap()
 
 void    ClapTrap::attack(const std::string& target)
 {
+    if (this->_energy_point == 0 || this->_hit_point == 0)
+    {
+        std::cout << "No energy point or hit point left" << std::endl;
+        return;
+    }
     this->_energy_point--;
+    this->_hit_point -= this->_attack_damage;
     std::cout << "ClapTrap " << this->_name << "attacks " << target
               << ", causing " << this->_attack_damage << " points of damage!"
               << std::endl;
@@ -54,11 +63,55 @@ void    ClapTrap::attack(const std::string& target)
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
+    if (this->_hit_point == 0)
+    {
+        std::cout << "No hit point left" << std::endl;
+        return;
+    }
     this->_hit_point -= amount;
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
+    if (this->_energy_point == 0 || this->_hit_point == 0)
+    {
+        return;
+    }
     this->_energy_point--;
     this->_hit_point += amount;
+}
+
+std::string ClapTrap::getName() const {
+    return this->_name;
+}
+
+int ClapTrap::getHitPoint() const {
+    return this->_hit_point;
+}
+
+int ClapTrap::getEnergyPoint() const {
+    return this->_energy_point;
+}
+int ClapTrap::getAttackDamage() const {
+    return this->_attack_damage;
+}
+
+void    ClapTrap::setName(std::string name)
+{
+    this->_name = name;
+}
+
+void ClapTrap::setHitPoint(int hit_point)
+{
+    this->_hit_point = hit_point;
+}
+
+void ClapTrap::setEnergyPoint(int energy_point)
+{
+    this->_energy_point = energy_point;
+}
+
+void ClapTrap::setAttackDamage(int attack_damage)
+{
+    this->_attack_damage = attack_damage;
 }
