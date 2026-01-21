@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:55:55 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/21 16:24:33 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/22 00:28:32 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ ScavTrap::ScavTrap(const ScavTrap& other)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap& other)
 {
-    if (this == &other) {
-        return (*this);
+    if (this != &other) {
+        _name = other._name;
+        _attack_damage = other._attack_damage;
+        _energy_point = other._energy_point;
+        _hit_point = other._hit_point;
     }
     return (*this);
 }
