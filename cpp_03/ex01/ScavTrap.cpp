@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:55:55 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 13:39:13 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 00:09:52 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ ScavTrap::ScavTrap(const ScavTrap& other): ClapTrap(other)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap& other)
 {
-    ClapTrap::operator=(other);
+    if (this != &other) {
+        ClapTrap::operator=(other);
+    }
     std::cout << "ScavTrap Copy Assignment Operator called" << std::endl;
     return (*this);
 }
