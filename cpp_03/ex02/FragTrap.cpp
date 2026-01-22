@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:33:28 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 14:31:00 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 00:10:16 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ FragTrap::FragTrap(const FragTrap& other): ClapTrap(other)
 
 FragTrap &FragTrap::operator=(const FragTrap& other)
 {
-    ClapTrap::operator=(other);
+    if (this != &other) {
+        ClapTrap::operator=(other);
+    }
     std::cout << "FragTrap Copy Assignment Operator called" << std::endl;
     return (*this);
 }
