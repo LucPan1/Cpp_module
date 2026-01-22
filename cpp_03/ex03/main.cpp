@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:17 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 17:15:38 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/23 00:24:57 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,12 @@ void    display_infos(const std::string &name, int hit_point, int energy_point, 
 
 int main()
 {
-    ClapTrap claptrap("david");
+    DiamondTrap diamondtrap("david");
 
-    claptrap.attack("harry");
-    claptrap.takeDamage(9);
-    display_infos(claptrap.getName(), claptrap.getHitPoint(), claptrap.getEnergyPoint(), claptrap.getAttackDamage());
-    claptrap.beRepaired(20);
-    std::cout << "Hit point: " << claptrap.getHitPoint() << std::endl;
-
-    ScavTrap scavtrap("pierre");
-    scavtrap.attack("john");
-    scavtrap.takeDamage(9);
-    display_infos(scavtrap.getName(), scavtrap.getHitPoint(), scavtrap.getEnergyPoint(), scavtrap.getAttackDamage());
-    scavtrap.beRepaired(20);
-    std::cout << "Hit point: " << scavtrap.getHitPoint() << std::endl;
-    scavtrap.guardGate();
-
-    FragTrap fragtrap("jean");
-    fragtrap.attack("harry");
-    fragtrap.takeDamage(10);
-    display_infos(fragtrap.getName(), fragtrap.getHitPoint(), fragtrap.getEnergyPoint(), fragtrap.getAttackDamage());
-    fragtrap.beRepaired(20);
-    std::cout << "Hit point: " << fragtrap.getHitPoint() << std::endl;
-    fragtrap.highFivesGuys();
+    // diamondtrap.attack("harry");
+    // diamondtrap.takeDamage(9);
+    // display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
+    // diamondtrap.beRepaired(20);
+    // std::cout << "Hit point: " << diamondtrap.getHitPoint() << std::endl;
     return (0);
 }
