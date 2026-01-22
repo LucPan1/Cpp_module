@@ -6,29 +6,41 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:28 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/16 15:54:28 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/22 17:07:43 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap("scavtrap")
 {
+    _hit_point = ClapTrap::getHitPoint();
+    _energy_point = ClapTrap::getEnergyPoint();
+    _attack_damage = ClapTrap::getAttackDamage();
     std::cout << "ScavTrap Default Constructor called" << std::endl;
     return;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
+    _hit_point = ClapTrap::getHitPoint();
+    _energy_point = ClapTrap::getEnergyPoint();
+    _attack_damage = ClapTrap::getAttackDamage();
+    std::cout << "ScavTrap " << name << " Parameterized Constructor called" << std::endl;
+    return;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other): ClapTrap(other)
+{
+    std::cout << "ScavTrap Copy Constructor called" << std::endl;
     *this = other;
     return;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap& other)
 {
-    if (this == &other) {
-        return (*this);
-    }
+    ClapTrap::operator=(other);
+    std::cout << "ScavTrap Copy Assignment Operator called" << std::endl;
     return (*this);
 }
 
