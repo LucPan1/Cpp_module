@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:17 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/23 00:24:57 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 16:18:15 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int main()
 {
     DiamondTrap diamondtrap("david");
 
-    // diamondtrap.attack("harry");
-    // diamondtrap.takeDamage(9);
-    // display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
-    // diamondtrap.beRepaired(20);
-    // std::cout << "Hit point: " << diamondtrap.getHitPoint() << std::endl;
+    display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
+    diamondtrap.attack("harry");
+    diamondtrap.takeDamage(9);
+    display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
+    diamondtrap.beRepaired(20);
+    std::cout << "Hit point: " << diamondtrap.getHitPoint() << std::endl;
     return (0);
 }
