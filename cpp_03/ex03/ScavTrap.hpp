@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:34 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 17:07:58 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/23 15:18:37 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include <string>
 
-class ScavTrap: public ClapTrap {
+class ScavTrap: virtual public ClapTrap {
 
     public:
         ScavTrap();

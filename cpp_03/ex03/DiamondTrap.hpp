@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:53:54 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 17:22:33 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/23 15:24:35 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class DiamondTrap: public FragTrap, public ScavTrap {
         DiamondTrap &operator=(const DiamondTrap& other);
         ~DiamondTrap();
         
+		void	attack(const std::string& target);
         void	whoAmI();
     
     private:
