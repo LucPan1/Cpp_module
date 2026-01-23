@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:32:46 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/23 00:10:29 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 12:42:01 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 ScavTrap::ScavTrap(): ClapTrap("scavtrap")
 {
-    _hit_point = ClapTrap::getHitPoint();
-    _energy_point = ClapTrap::getEnergyPoint();
-    _attack_damage = ClapTrap::getAttackDamage();
+    _hit_point = 100;
+    _energy_point = 50;
+    _attack_damage = 20;
     std::cout << "ScavTrap Default Constructor called" << std::endl;
     return;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
-    _hit_point = ClapTrap::getHitPoint();
-    _energy_point = ClapTrap::getEnergyPoint();
-    _attack_damage = ClapTrap::getAttackDamage();
+    _hit_point = 100;
+    _energy_point = 50;
+    _attack_damage = 20;
     std::cout << "ScavTrap " << name << " Parameterized Constructor called" << std::endl;
     return;
 }

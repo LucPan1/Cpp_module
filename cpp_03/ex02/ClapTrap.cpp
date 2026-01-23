@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:32:14 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/22 13:49:50 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 12:40:09 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _name(), _hit_point(100), _energy_point(100), _attack_damage(30)
+ClapTrap::ClapTrap(): _name(), _hit_point(10), _energy_point(10), _attack_damage(0)
 {
     std::cout << "ClapTrap Default Constructor called" << std::endl;
     return;
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hit_point(100), _energy_point(100), _attack_damage(30)
+ClapTrap::ClapTrap(std::string name): _name(name), _hit_point(10), _energy_point(10), _attack_damage(0)
 {
-    std::cout << "ClapTrap " << name << " Parameterized Constructor called" << std::endl;
+    std::cout << "ClapTrap Parameterized Constructor called" << std::endl;
     return;
 }
 
