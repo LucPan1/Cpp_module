@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:53:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/23 00:11:00 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/23 12:44:32 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 FragTrap::FragTrap(): ClapTrap("FragTrap")
 {
-    _hit_point = ClapTrap::getHitPoint();
-    _energy_point = ClapTrap::getEnergyPoint();
-    _attack_damage = ClapTrap::getAttackDamage();
+    _hit_point = 100;
+    _energy_point = 100;
+    _attack_damage = 30;
     std::cout << "FragTrap Default Constructor called" << std::endl;
     return;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
-    _hit_point = ClapTrap::getHitPoint();
-    _energy_point = ClapTrap::getEnergyPoint();
-    _attack_damage = ClapTrap::getAttackDamage();
+    _hit_point = 100;
+    _energy_point = 100;
+    _attack_damage = 30;
     std::cout << "FragTrap " << name << " Parameterized Constructor called" << std::endl;
     return;
 }
