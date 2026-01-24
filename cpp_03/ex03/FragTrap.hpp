@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:09 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/23 15:20:36 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/24 01:05:23 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "ClapTrap.hpp"
 #include <iostream>
+
+#define FragTrap_attackDamage 30
 
 class FragTrap: virtual public ClapTrap {
 

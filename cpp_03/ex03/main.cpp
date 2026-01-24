@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:54:17 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/23 16:18:15 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/24 00:32:51 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main()
     DiamondTrap diamondtrap("david");
 
     display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
+    diamondtrap.whoAmI();
     diamondtrap.attack("harry");
     diamondtrap.takeDamage(9);
     display_infos(diamondtrap.getName(), diamondtrap.getHitPoint(), diamondtrap.getEnergyPoint(), diamondtrap.getAttackDamage());
