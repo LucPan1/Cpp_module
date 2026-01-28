@@ -4,10 +4,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = polymorphism
 
 SRC = main.cpp \
-	  ClapTrap.cpp \
-	  ScavTrap.cpp \
-	  FragTrap.cpp \
-	  DiamondTrap.cpp
+	  Animal.cpp \
+	  Cat.cpp \
+	  Dog.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
