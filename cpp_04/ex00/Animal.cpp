@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:23:00 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 14:53:50 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/29 15:35:35 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ std::string	Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	std::cout << "Base class Animal" << std::endl;
+	std::cout << "Animal sound" << std::endl;
 }
