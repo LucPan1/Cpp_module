@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:31:29 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/27 16:05:05 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/29 14:51:06 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class Dog: public Animal {
         Dog(const Dog& other);
         Dog &operator=(const Dog& other);
         ~Dog();
+
+        void    makeSound() const;
+
 };
 
 #endif

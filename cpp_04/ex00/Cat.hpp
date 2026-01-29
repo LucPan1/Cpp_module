@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:38:53 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/27 16:05:13 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/29 14:51:53 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class Cat: public Animal {
         Cat(const Cat& other);
         Cat &operator=(const Cat& other);
         ~Cat();
+
+        void    makeSound() const;
+
 };
 
 #endif

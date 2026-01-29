@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:31:27 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/27 16:04:45 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/29 14:52:47 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ Dog::~Dog()
 {
     std::cout << "Dog Destructor called" << std::endl;
     return;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "The " << getType() << " is barking" << std::endl;
 }

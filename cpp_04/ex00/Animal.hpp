@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:23:08 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/28 19:59:24 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/29 14:49:54 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal {
 
         std::string	getType() const;
 		
-		void	makeSound();
+		virtual void	makeSound() const;
 		
     protected:
         std::string _type;

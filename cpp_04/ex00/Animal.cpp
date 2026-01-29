@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:23:00 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/28 19:59:17 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/29 14:53:50 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ std::string	Animal::getType() const
 	return (this->_type);
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
-	std::cout << getType() << " is " << std::endl;
+	std::cout << "Base class Animal" << std::endl;
 }

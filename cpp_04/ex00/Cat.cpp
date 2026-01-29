@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:38:36 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/28 20:01:38 by luc              ###   ########.fr       */
+/*   Updated: 2026/01/29 14:52:43 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ Cat::~Cat()
 {
     std::cout << "Cat Destructor called" << std::endl;
     return;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "The " << getType() << " is meowing" << std::endl;
 }
