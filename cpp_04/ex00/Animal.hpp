@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:23:08 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 14:49:54 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/30 12:42:40 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal {
         Animal &operator=(const Animal& other);
         virtual ~Animal();
 
-        std::string	getType() const;
+        std::string getType() const;
 		
 		virtual void	makeSound() const;
 		
