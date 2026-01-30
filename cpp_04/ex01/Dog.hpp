@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:15 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 16:53:52 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/30 15:06:56 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Dog: public Animal {
 
         void    makeSound() const;
 
+    private:
+        Brain *idea;
 };
 
 #endif

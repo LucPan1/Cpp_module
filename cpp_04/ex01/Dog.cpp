@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:09 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 15:53:10 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/30 16:05:41 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ Dog::Dog(std::string type): Animal(type)
 Dog::Dog(const Dog& other)
 {
     std::cout << "Dog Copy Constructor called" << std::endl;
-    *this = other;
+    idea = new Brain();
+    // *idea = *(other.idea);
+    memcpy(idea, other.idea, sizeof(Brain));
     return;
 }
 
@@ -42,6 +44,7 @@ Dog &Dog::operator=(const Dog& other)
 
 Dog::~Dog()
 {
+    delete idea;
     std::cout << "Dog Destructor called" << std::endl;
     return;
 }

@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:52:33 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 15:52:34 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/30 16:05:34 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 
 class Animal {
     
