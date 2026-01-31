@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:52:46 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/30 16:05:39 by lupan            ###   ########.fr       */
+/*   Updated: 2026/01/30 21:32:48 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ Cat::Cat(std::string type): Animal(type)
     return;
 }
 
-Cat::Cat(const Cat& other)
+Cat::Cat(const Cat& other): Animal(other)
 {
     std::cout << "Cat Copy Constructor called" << std::endl;
     // *this = other;
     idea = new Brain();
-    // *idea = *(other.idea);
-    memcpy(idea, other.idea, sizeof(Brain));
+    *idea = *(other.idea);
+    // memcpy(idea, other.idea, sizeof(Brain));
     return;
 }
 
@@ -45,7 +45,7 @@ Cat &Cat::operator=(const Cat& other)
 
 Cat::~Cat()
 {
-    delete idea;
+    // delete idea;
     std::cout << "Cat Destructor called" << std::endl;
     return;
 }
