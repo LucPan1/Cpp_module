@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:15 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/31 17:59:35 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/01 23:29:19 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@ class Dog: public Animal {
         Dog &operator=(const Dog& other);
         ~Dog();
 
+        void	getIdea();
+        void	setIdea(size_t i, std::string idea);
+
         void    makeSound();
 
     private:
-        Brain *idea;
+        Brain *_brain;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:20 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/31 18:07:55 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/01 23:30:32 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,37 @@
 
 int main()
 {
-    Animal **obj = new Animal*[2];
-    obj[0] = new Dog();
-    obj[1] = new Cat();
+    Animal *obj[4];
 
-    Animal* j = obj[0];
-    Animal* i = obj[1];
-    j->makeSound();
-    i->makeSound();
-    for (int it = 0; it < 2; it++)
+    for (int i = 0; i < 4; i++)
     {
-        delete obj[it];
+        if (i % 2 == 0)
+            obj[i] = new Cat();
+        else 
+            obj[i] = new Dog();
     }
-    delete [] obj;
+
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << "Animal type: " << obj[i]->getType() << std::endl;
+        obj[i]->makeSound();
+        std::cout << std::endl;
+    }
+
+    for (int i = 0; i < 4; i++)
+        delete obj[i];
+
+    Dog *d = new Dog();
+    d->setIdea(0, "This is a test");
+    d->setIdea(1, "for Dog object");
+
+    Dog *arr = new Dog(*d);
+    std::cout << "The " << d->getType() << " idea: " << std::endl;
+    d->getIdea();
+    delete (d);
+
+    std::cout << "The " << arr->getType() << " idea: " << std::endl;
+    arr->getIdea();
+    delete (arr);
     return (0);
 }
