@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:20 by luc               #+#    #+#             */
-/*   Updated: 2026/02/01 17:26:56 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/01 23:35:31 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ std::string const & AMateria::getType() const
 
 AMateria* clone()
 {
-    return;
+    // return AMateria **obj = new AMateria();
 }
 
 void use(ICharacter& target)
