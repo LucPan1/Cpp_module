@@ -6,7 +6,7 @@ NAME = polymorphism
 SRC = main.cpp \
 	  Animal.cpp \
 	  Cat.cpp \
-	  Dog.cpp
+	  Dog.cpp 
 
 OBJS = $(SRC:.cpp=.o)
 

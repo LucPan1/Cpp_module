@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:38:36 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 14:52:43 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/01 23:12:36 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Cat::Cat(std::string type): Animal(type)
     return;
 }
 
-Cat::Cat(const Cat& other)
+Cat::Cat(const Cat& other): Animal(other)
 {
     std::cout << "Cat Copy Constructor called" << std::endl;
     *this = other;
