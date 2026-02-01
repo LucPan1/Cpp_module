@@ -6,13 +6,13 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:52:46 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/30 21:32:48 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/01 23:00:41 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(): Animal("Cat")
+Cat::Cat(): Animal("Cat"), _brain(new Brain)
 {
     std::cout << "Cat Default Constructor called" << std::endl;
     return;
@@ -24,13 +24,11 @@ Cat::Cat(std::string type): Animal(type)
     return;
 }
 
-Cat::Cat(const Cat& other): Animal(other)
+Cat::Cat(const Cat& other): Animal(other), _brain(NULL)
 {
     std::cout << "Cat Copy Constructor called" << std::endl;
-    // *this = other;
-    idea = new Brain();
-    *idea = *(other.idea);
-    // memcpy(idea, other.idea, sizeof(Brain));
+    _brain = new Brain();
+    *_brain = *(other._brain);
     return;
 }
 
@@ -38,6 +36,7 @@ Cat &Cat::operator=(const Cat& other)
 {
     if (this != &other) {
         Animal::operator=(other);
+        this->_brain = new Brain(*other._brain);
     }
     std::cout << "Cat Copy Assignment Operator called" << std::endl;
     return (*this);
@@ -45,7 +44,7 @@ Cat &Cat::operator=(const Cat& other)
 
 Cat::~Cat()
 {
-    // delete idea;
+    delete this->_brain;
     std::cout << "Cat Destructor called" << std::endl;
     return;
 }
@@ -53,4 +52,15 @@ Cat::~Cat()
 void	Cat::makeSound() const
 {
 	std::cout << "The " << getType() << " is meowing" << std::endl;
+}
+
+void	Cat::getIdea()
+{
+	for (int i = 0; i < 2; i++)
+		std::cout << "Idea number " << i << " of the Cat is: " << this->_brain->getIdea(i) << std::endl;
+}
+
+void	Cat::setIdea(size_t i, std::string idea)
+{
+	this->_brain->setIdea(i, idea);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:52:56 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 16:31:08 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/01 22:55:13 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ class Cat: public Animal {
         Cat &operator=(const Cat& other);
         ~Cat();
 
+		void	getIdea();
+        void	setIdea(size_t i, std::string idea);
+
         void    makeSound() const;
-        std::string getIdeas() const;
 
     private:
-        Brain* idea;
+        Brain* _brain;
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:15 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/30 15:06:56 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/01 22:54:26 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@ class Dog: public Animal {
         Dog &operator=(const Dog& other);
         ~Dog();
 
+		void	getIdea();
+        void	setIdea(size_t i, std::string idea);
+
         void    makeSound() const;
 
     private:
-        Brain *idea;
+        Brain *_brain;
 };
 
 #endif

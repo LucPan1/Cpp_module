@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 16:17:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/01/29 16:54:43 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/01 21:44:34 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BRAIN_HPP
 
 #include <iostream>
+#include <string>
 
 class Brain {
 
@@ -22,9 +23,12 @@ class Brain {
         Brain(const Brain& other);
         Brain &operator=(const Brain& other);
         ~Brain();
+
+        std::string	getIdea(size_t i) const;
+        void		setIdea(size_t i, std::string idea);
     
     private:
-        std::string ideas[100];
+        std::string _ideas[100];
 };
 
 #endif
