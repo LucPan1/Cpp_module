@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:20 by luc               #+#    #+#             */
-/*   Updated: 2026/02/01 23:35:31 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/02 19:16:02 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,15 @@ std::string const & AMateria::getType() const
     return (this->_type);
 }
 
-AMateria* clone()
-{
-    // return AMateria **obj = new AMateria();
-}
-
 void use(ICharacter& target)
 {
+    std::cout << "Ice: " << "\"* shoots an ice bolt at *\"" << &target << std::endl;
+    std::cout << "Cure: " << "\"* heals " << &target << "*\"" << std::endl;
 
 }
+
+// std::ostream &operator<<(std::ostream &out, const ICharacter &fixed)
+// {
+//     out << fixed;
+//     return out;
+// }

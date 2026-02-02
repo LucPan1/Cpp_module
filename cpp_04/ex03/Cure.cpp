@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:16 by luc               #+#    #+#             */
-/*   Updated: 2026/02/01 17:29:07 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/02 18:52:31 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ Cure::~Cure()
 {
     std::cout << "Cure Destructor called" << std::endl;
     return;
+}
+
+AMateria* Cure::clone() const
+{
+    return (new Cure{*this});
 }

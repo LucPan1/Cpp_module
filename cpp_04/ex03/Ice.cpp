@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:22 by luc               #+#    #+#             */
-/*   Updated: 2026/02/01 17:30:03 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/02 18:53:17 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ Ice::~Ice()
 {
     std::cout << "Ice Destructor called" << std::endl;
     return;
+}
+
+AMateria* Ice::clone() const
+{
+    return (new Ice{*this});
 }

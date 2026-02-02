@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:24 by luc               #+#    #+#             */
-/*   Updated: 2026/02/01 17:25:33 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/02 19:14:55 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ class AMateria {
         virtual void use(ICharacter& target);
 
 };
+
+// std::ostream &operator<<(std::ostream &out, const ICharacter &fixed);
 
 #endif

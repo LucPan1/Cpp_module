@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = interface
 
 SRC = main.cpp \
-	  AMateria.cpp
+# 	  AMateria.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
