@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:37:01 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 19:00:10 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/04 15:51:56 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 #include <string>
 
 class ICharacter: public AMateria {
+
+    private:
+        std::string slots[4];
 
     public:
         virtual ~ICharacter() {}
