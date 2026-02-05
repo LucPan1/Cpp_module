@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:20 by luc               #+#    #+#             */
-/*   Updated: 2026/02/05 16:43:35 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/06 00:24:54 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria()
+AMateria::AMateria(): _type()
 {
     std::cout << "AMateria Default Constructor called" << std::endl;
     return;
 }
 
-AMateria::AMateria(std::string const &type)
+AMateria::AMateria(std::string const &type): _type(type)
 {
     std::cout << "AMateria Parameterized Constructor called" << std::endl;
     return;

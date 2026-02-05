@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 21:17:33 by luc               #+#    #+#             */
-/*   Updated: 2026/02/05 16:41:01 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/06 00:11:21 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CHARACTER_HPP
 
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
 
 class Character: public ICharacter {
 
@@ -27,6 +28,10 @@ class Character: public ICharacter {
         Character(const Character& other);
         Character &operator=(const Character& other);
         ~Character();
+
+        void	equip(AMateria* m);
+        void	unequip(int idx);
+        void	use(int idx, ICharacter& target);
 
 		std::string const & getName() const;
 };

@@ -4,8 +4,10 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = a.out
 
 SRC = main.cpp \
-	  AMateria.cpp
-
+	  AMateria.cpp \
+	  Character.cpp \
+	  Cure.cpp \
+	  Ice.cpp 
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

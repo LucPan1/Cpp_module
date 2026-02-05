@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 21:17:31 by luc               #+#    #+#             */
-/*   Updated: 2026/02/05 17:22:23 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/06 00:40:51 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ Character &Character::operator=(const Character& other)
 
 Character::~Character()
 {
+    for (int i = 0; i < 4; i++)
+    {
+        if (_inventory[i] != NULL)
+            delete (_inventory[i]);
+    }
     std::cout << "Character Destructor called" << std::endl;
     return;
 }
@@ -59,10 +64,34 @@ std::string const &Character::getName() const
     return (this->_name);
 }
 
-void ICharacter::equip(AMateria* m)
+void Character::equip(AMateria* m)
 {
+    if (!m)
+        return;
     for (int i = 0; i < 4; i++)
     {
-        // Character::_inventory[i] = m;
+        if (_inventory[i] == NULL)
+        {
+            _inventory[i] = m;
+            return;
+        }
     }
 }
+
+void	Character::unequip(int idx)
+{
+    if (idx >= 0 && idx < 4)
+        _inventory[idx] = NULL;
+    return;
+}
+
+void    Character::use(int idx, ICharacter& target)
+{
+    if (idx >= 0 && idx < 4)
+    {
+        if (_inventory[idx] != NULL)
+            _inventory[idx]->use(target);
+    }
+    return;
+}
+

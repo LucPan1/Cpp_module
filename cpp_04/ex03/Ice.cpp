@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:22 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 18:53:17 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/06 00:33:11 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice()
     return;
 }
 
-Ice::Ice(const Ice& other)
+Ice::Ice(const Ice& other): AMateria(other)
 {
     std::cout << "Ice Copy Constructor called" << std::endl;
     *this = other;
@@ -42,5 +42,5 @@ Ice::~Ice()
 
 AMateria* Ice::clone() const
 {
-    return (new Ice{*this});
+    return (new Ice(*this));
 }

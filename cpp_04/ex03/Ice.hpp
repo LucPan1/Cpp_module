@@ -6,12 +6,12 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:24 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 18:53:25 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/06 00:13:18 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Ice_HPP
-# define Ice_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 #include "AMateria.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:16 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 18:52:31 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/06 00:36:50 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure()
     return;
 }
 
-Cure::Cure(const Cure& other)
+Cure::Cure(const Cure& other): AMateria(other)
 {
     std::cout << "Cure Copy Constructor called" << std::endl;
     *this = other;
@@ -42,5 +42,5 @@ Cure::~Cure()
 
 AMateria* Cure::clone() const
 {
-    return (new Cure{*this});
+    return (new Cure(*this));
 }
