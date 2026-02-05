@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:20 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 19:16:02 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/05 16:43:35 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ AMateria::AMateria(const AMateria& other)
 AMateria &AMateria::operator=(const AMateria& other)
 {
     if (this != &other) {
-        return (*this);
+        _type = other._type;
     }
     std::cout << "AMateria Copy Assignment Operator called" << std::endl;
     return (*this);

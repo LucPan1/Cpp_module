@@ -3,17 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:36:59 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 19:00:30 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/05 17:02:29 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
-
-ICharacter::~ICharacter()
-{
-    std::cout << "ICharacter Destructor called" << std::endl;
-    return;
-}

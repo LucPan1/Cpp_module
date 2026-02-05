@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:08:24 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 19:14:05 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/05 17:18:05 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "Character.hpp"
 
 int main()
 {
-    AMateria *mat;
+    Character *cha;
 
+    cha->getName();
+
+    std::cout << "Type: " << cha->getName() << std::endl;
     return (0);
 }

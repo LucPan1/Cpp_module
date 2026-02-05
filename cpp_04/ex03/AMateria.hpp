@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:10:24 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 19:14:55 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/05 17:09:03 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
-#include "ICharacter.hpp"
 #include <iostream>
 #include <string>
+
+class ICharacter;
 
 class AMateria {
 

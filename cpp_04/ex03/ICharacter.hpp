@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:37:01 by luc               #+#    #+#             */
-/*   Updated: 2026/02/04 21:16:34 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/05 17:08:54 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include "AMateria.hpp"
 #include <iostream>
 #include <string>
+
+class AMateria;
 
 class ICharacter {
 
