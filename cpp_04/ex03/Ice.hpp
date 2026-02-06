@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:24 by luc               #+#    #+#             */
-/*   Updated: 2026/02/06 00:13:18 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/06 23:01:15 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Ice: public AMateria {
         Ice &operator=(const Ice& other);
         ~Ice();
 
-        AMateria* clone() const;
+		void		use(ICharacter& target);
+        AMateria*	clone() const;
 };
 
 #endif

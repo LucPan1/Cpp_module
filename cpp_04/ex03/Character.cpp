@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 21:17:31 by luc               #+#    #+#             */
-/*   Updated: 2026/02/06 14:34:33 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/06 23:43:51 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ Character::Character(): _name("pal")
 {
     for (int i = 0; i < 4; i++)
         _inventory[i] = NULL;
-    for (int i = 0; i < 4; i++)
-        std::cout << _inventory[i] << std::endl;
     std::cout << "Character Default Constructor called" << std::endl;
     return;
 }
@@ -25,16 +23,14 @@ Character::Character(): _name("pal")
 Character::Character(const std::string& type): _name(type)
 {
     for (int i = 0; i < 4; i++)
-        _inventory[i] = NULL;
-    for (int i = 0; i < 4; i++)
-        std::cout << _inventory[i] << std::endl;
-    std::cout << "Character Parameterized Constructor called" << std::endl;
+        _inventory[i] = NULL;;
+    // std::cout << "Character Parameterized Constructor called" << std::endl;
     return;
 }
 
 Character::Character(const Character& other)
 {
-    std::cout << "Character Copy Constructor called" << std::endl;
+    // std::cout << "Character Copy Constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
         if (_inventory[i])
             _inventory[i] = other._inventory[i]->clone();
@@ -55,7 +51,7 @@ Character &Character::operator=(const Character& other)
                 _inventory[i] = other._inventory[i]->clone();
         }
     }
-    std::cout << "Character Copy Assignment Operator called" << std::endl;
+    // std::cout << "Character Copy Assignment Operator called" << std::endl;
     return (*this);
 }
 
@@ -66,7 +62,7 @@ Character::~Character()
         delete (_inventory[i]);
         _inventory[i] = NULL;
     }
-    std::cout << "Character Destructor called" << std::endl;
+    // std::cout << "Character Destructor called" << std::endl;
     return;
 }
 
@@ -93,16 +89,13 @@ void	Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
         _inventory[idx] = NULL;
-    return;
 }
 
 void    Character::use(int idx, ICharacter& target)
 {
-    if (idx >= 0 && idx < 4)
-    {
-        if (_inventory[idx] != NULL)
-            _inventory[idx]->use(target);
-    }
-    return;
+    if (idx < 0 || idx >= 4)
+        return;
+    if (_inventory[idx] != NULL)
+        _inventory[idx]->use(target);
 }
 

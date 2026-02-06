@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 16:30:20 by luc               #+#    #+#             */
-/*   Updated: 2026/02/02 18:56:18 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/06 23:01:22 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Cure: public AMateria {
         Cure &operator=(const Cure& other);
         ~Cure();
 
-        AMateria* clone() const;
+		void		use(ICharacter& target);
+        AMateria*	clone() const;
 };
 
 #endif

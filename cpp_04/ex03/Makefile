@@ -6,8 +6,10 @@ NAME = a.out
 SRC = main.cpp \
 	  AMateria.cpp \
 	  Character.cpp \
+	  MateriaSource.cpp \
 	  Cure.cpp \
 	  Ice.cpp 
+
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
