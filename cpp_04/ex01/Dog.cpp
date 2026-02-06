@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:53:09 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/01 23:00:25 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/07 00:30:24 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Dog &Dog::operator=(const Dog& other)
 {
     if (this != &other) {
         Dog::operator=(other);
+        delete _brain;
         this->_brain = new Brain(*other._brain);
     }
     std::cout << "Dog Copy Assignment Operator called" << std::endl;

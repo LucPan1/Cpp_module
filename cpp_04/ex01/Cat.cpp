@@ -6,7 +6,7 @@
 /*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:52:46 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/01 23:00:41 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/07 00:29:45 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Cat &Cat::operator=(const Cat& other)
 {
     if (this != &other) {
         Animal::operator=(other);
+        delete _brain;
         this->_brain = new Brain(*other._brain);
     }
     std::cout << "Cat Copy Assignment Operator called" << std::endl;
