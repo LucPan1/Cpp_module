@@ -1,11 +1,11 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I./includes
 
-NAME = a.out
+NAME = BureauCrat
 SRC_DIR = src
 
 SRC = $(SRC_DIR)/main.cpp \
-	  $(SRC_DIR)/BureauCrat.cpp \
+	  $(SRC_DIR)/BureauCrat.cpp 
 
 OBJS = $(SRC:.cpp=.o)
 
