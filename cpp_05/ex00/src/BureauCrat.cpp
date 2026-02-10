@@ -6,13 +6,13 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/10 17:05:26 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/10 17:11:52 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BureauCrat.hpp"
 
-BureauCrat::BureauCrat(): _name("default"), _grades(36)
+BureauCrat::BureauCrat(): _name("default"), _grades(0)
 {
     std::cout << "BureauCrat Default Constructor called" << std::endl;
     return;
@@ -78,8 +78,8 @@ void    BureauCrat::decrement()
         throw std::exception();
 }
 
-// std::ostream &operator<<(std::ostream &out, const BureauCrat &grade)
-// {
-//     out << grade;
-//     return (out);
-// }
+std::ostream &operator<<(std::ostream &out, const BureauCrat &grade)
+{
+    out << grade;
+    return (out);
+}

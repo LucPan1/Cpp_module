@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:52:11 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/10 16:54:29 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/10 17:09:45 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <string>
+#include <exception>
 
 class BureauCrat {
 

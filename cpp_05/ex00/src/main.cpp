@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:22:58 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/10 17:04:02 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/10 17:08:34 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
     }
     catch (std::exception & e)
     {
-        std::cout << "Catch error: " << e.what() << std::endl; 
+        std::cerr << "Catch error: " << e.what() << std::endl; 
     }
     return (0);
 }
