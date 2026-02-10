@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   BureauCrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:52:11 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/09 16:02:47 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/10 16:54:29 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,20 @@ class BureauCrat {
         BureauCrat &operator=(const BureauCrat& other);
         ~BureauCrat();
 
-        std::string getName();
-        std::string getGrade(size_t i);
+        bool    GradeTooHighException();
+        bool    GradeTooLowException();
+
+        std::string	getName();
+        int			getGrade();
+
+        void    increment();
+        void    decrement();
 
     private:
         const std::string	_name;
-        std::string			_grades[150];
+        int			        _grades;
 };
+
+std::ostream &operator<<(std::ostream &out, const BureauCrat &grade);
 
 #endif
