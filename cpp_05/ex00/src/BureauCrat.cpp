@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BureauCrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 14:17:24 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/11 19:36:44 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ void    BureauCrat::decrement()
 
 std::ostream &operator<<(std::ostream &out, const BureauCrat &grade)
 {
-    out << grade.getName() << ", bureaucrat grade " << grade.getName();
+    out << grade.getName() << ", bureaucrat grade " << grade.getGrade();
     return (out);
 }
