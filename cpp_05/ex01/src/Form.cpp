@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 15:13:20 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/11 19:51:29 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): _name("fizz"), _is_signed(false), _grades_sign(75), _grades_exec()
+Form::Form(): _name("fizz"), _is_signed(false), _grades_sign(75), _grades_exec(37)
 {
     std::cout << "Form Default Constructor called" << std::endl;
     return;
@@ -76,7 +76,10 @@ bool    Form::GradeTooLowException()
 bool	Form::beSigned()
 {
 	if (this->_grades_sign < 76 && this->_grades_sign > 0)
+    {
 		this->_is_signed = true;
+        return (true);
+    }
 	else
 		Form::GradeTooLowException();
 	return (false);
@@ -87,8 +90,8 @@ bool	Form::signForm(BureauCrat bureau, Form form)
 	if (Form::beSigned())
 		std::cout << bureau << " signed " << form << std::endl;
 	else
-		std::cout << bureau << " couldn't sign " << form << " because " << " the grade is not high enough";
-	return (false);
+		std::cout << bureau << " couldn't sign " << form << " because the grade is not high enough" << std::endl;
+	return (0);
 }
 
 std::ostream &operator<<(std::ostream &out, const Form &form)

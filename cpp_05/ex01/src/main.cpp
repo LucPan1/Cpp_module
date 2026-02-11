@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:22:58 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 15:10:35 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/11 19:30:24 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main()
             throw std::exception();
         if (form.GradeTooLowException())
             throw std::exception();
-        std::cout << form << std::endl;
+        form.signForm(bureau, form);
     }
     catch (std::exception & e)
     {
