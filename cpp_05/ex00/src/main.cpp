@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:22:58 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/10 17:08:34 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/11 12:24:22 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int main()
             throw std::exception();
         bureau.decrement();
         bureau.increment();
-        std::cout << bureau.getName() << std::endl;
-        std::cout << bureau.getGrade() << std::endl;
+        std::cout << bureau << std::endl;
     }
     catch (std::exception & e)
     {
