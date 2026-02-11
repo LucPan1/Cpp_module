@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 12:25:10 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/11 14:17:24 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ BureauCrat::~BureauCrat()
 
 bool    BureauCrat::GradeTooHighException()
 {
-    if (this->_grades > 150)
+    if (this->_grades < 1)
         return (true);
     return (false);
 }
 
 bool    BureauCrat::GradeTooLowException()
 {
-    if (this->_grades < 1)
+    if (this->_grades > 150)
         return (true);
     return (false);
 }
