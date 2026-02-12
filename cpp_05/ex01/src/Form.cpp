@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 19:51:29 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/12 16:21:50 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): _name("fizz"), _is_signed(false), _grades_sign(75), _grades_exec(37)
+Form::Form(): _name("fizz"), _is_signed(false), _grades_sign(75), _grades_exec(75)
 {
     std::cout << "Form Default Constructor called" << std::endl;
     return;
@@ -73,9 +73,9 @@ bool    Form::GradeTooLowException()
     return (false);
 }
 
-bool	Form::beSigned()
+bool	Form::beSigned(BureauCrat grade)
 {
-	if (this->_grades_sign < 76 && this->_grades_sign > 0)
+	if (grade.getGrade() < this->_grades_sign)
     {
 		this->_is_signed = true;
         return (true);
@@ -85,9 +85,9 @@ bool	Form::beSigned()
 	return (false);
 }
 
-bool	Form::signForm(BureauCrat bureau, Form form)
+bool	Form::signForm(BureauCrat &bureau, Form form)
 {
-	if (Form::beSigned())
+	if (Form::beSigned(bureau))
 		std::cout << bureau << " signed " << form << std::endl;
 	else
 		std::cout << bureau << " couldn't sign " << form << " because the grade is not high enough" << std::endl;

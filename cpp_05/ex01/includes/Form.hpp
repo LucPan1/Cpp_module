@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:30:01 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 19:39:49 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/12 16:09:33 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class Form {
 		bool	GradeTooHighException();
 		bool	GradeTooLowException();
 
-		bool	beSigned();
-		bool	signForm(BureauCrat bureau, Form form);
+		bool	beSigned(BureauCrat grade);
+		bool	signForm(BureauCrat &bureau, Form form);
 
     private:
         const std::string	_name;

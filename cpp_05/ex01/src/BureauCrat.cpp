@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   BureauCrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/11 19:35:53 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/12 16:10:31 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BureauCrat.hpp"
 
-BureauCrat::BureauCrat(): _name("john"), _grades(1)
+BureauCrat::BureauCrat(): _name("john"), _grades(151)
 {
     std::cout << "BureauCrat Default Constructor called" << std::endl;
     return;
