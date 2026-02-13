@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:30:01 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/12 16:09:33 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/13 12:48:32 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,27 @@ class Form {
         Form &operator=(const Form& other);
         ~Form();
 
+        class GradeTooHighException: public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {
+                    return "Grade is inferior to 1";
+                }
+        };
+        class GradeTooLowException: public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {
+                    return "Grade is superior to 150";
+                }
+        };
+
 		std::string	getName() const;
 		bool 		getSigned() const;
 		int 		getGradesSign() const;
 		int 		getGradesExec() const;
-
-		bool	GradeTooHighException();
-		bool	GradeTooLowException();
 
 		bool	beSigned(BureauCrat grade);
 		bool	signForm(BureauCrat &bureau, Form form);

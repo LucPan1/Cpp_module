@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/12 16:21:50 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/13 15:07:34 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Form::Form(const Form& other): _name(other._name), _is_signed(other._is_signed),
 Form &Form::operator=(const Form& other)
 {
     if (this != &other) {
-        return (*this);
+        _is_signed = other._is_signed;
     }
     // std::cout << "Form Copy Assignment Operator called" << std::endl;
     return (*this);
@@ -59,28 +59,14 @@ int		Form::getGradesExec() const
     return (this->_grades_exec);
 }
 
-bool    Form::GradeTooHighException()
-{
-    if (this->_grades_sign < 1)
-        return (true);
-    return (false);
-}
-
-bool    Form::GradeTooLowException()
-{
-    if (this->_grades_sign > 150)
-        return (true);
-    return (false);
-}
-
 bool	Form::beSigned(BureauCrat grade)
 {
-	if (grade.getGrade() < this->_grades_sign)
+	if (grade.getGrade() < this->_grades_sign && grade.getGrade() < this->_grades_exec)
     {
 		this->_is_signed = true;
         return (true);
     }
-	else
+	else if (grade.getGrade() > 150)
 		Form::GradeTooLowException();
 	return (false);
 }

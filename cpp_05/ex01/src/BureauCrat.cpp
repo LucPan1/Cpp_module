@@ -6,13 +6,13 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/12 16:10:31 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/13 15:08:44 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BureauCrat.hpp"
 
-BureauCrat::BureauCrat(): _name("john"), _grades(151)
+BureauCrat::BureauCrat(): _name("john"), _grades(1)
 {
     std::cout << "BureauCrat Default Constructor called" << std::endl;
     return;
@@ -28,7 +28,7 @@ BureauCrat::BureauCrat(const BureauCrat& other)
 BureauCrat &BureauCrat::operator=(const BureauCrat& other)
 {
     if (this != &other) {
-        return (*this);
+        _grades = other._grades;
     }
     // std::cout << "BureauCrat Copy Assignment Operator called" << std::endl;
     return (*this);
@@ -38,20 +38,6 @@ BureauCrat::~BureauCrat()
 {
     std::cout << "BureauCrat Destructor called" << std::endl;
     return;
-}
-
-bool    BureauCrat::GradeTooHighException()
-{
-    if (this->_grades < 1)
-        return (true);
-    return (false);
-}
-
-bool    BureauCrat::GradeTooLowException()
-{
-    if (this->_grades > 150)
-        return (true);
-    return (false);
 }
 
 std::string BureauCrat::getName() const
@@ -68,14 +54,14 @@ void    BureauCrat::increment()
 {
     this->_grades--;
     if (this->_grades < 1)
-        throw std::exception();
+        throw BureauCrat::GradeTooHighException();
 }
 
 void    BureauCrat::decrement()
 {
     this->_grades++;
     if (this->_grades > 150)
-        throw std::exception();
+        throw BureauCrat::GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &out, const BureauCrat &grade)
