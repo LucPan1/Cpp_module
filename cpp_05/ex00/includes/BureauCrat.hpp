@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:52:11 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/13 12:17:28 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/16 14:48:17 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class BureauCrat {
 
     public:
         BureauCrat();
+        BureauCrat(const std::string& name, int grade);
         BureauCrat(const BureauCrat& other);
         BureauCrat &operator=(const BureauCrat& other);
         ~BureauCrat();

@@ -6,7 +6,7 @@
 /*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:54:12 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/13 12:40:23 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/16 14:53:49 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ BureauCrat::BureauCrat(): _name("john"), _grades(1)
     std::cout << "BureauCrat Default Constructor called" << std::endl;
     return;
 }
+
+// BureauCrat::BureauCrat(const std::string& name, int grade): _name(name), _grades(grade) 
+// {
+//     return;
+// }
 
 BureauCrat::BureauCrat(const BureauCrat& other)
 {
@@ -54,14 +59,14 @@ void    BureauCrat::increment()
 {
     this->_grades--;
     if (this->_grades < 1)
-        throw BureauCrat::GradeTooHighException();
+        throw GradeTooHighException();
 }
 
 void    BureauCrat::decrement()
 {
     this->_grades++;
     if (this->_grades > 150)
-        throw BureauCrat::GradeTooLowException();
+        throw GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &out, const BureauCrat &grade)
