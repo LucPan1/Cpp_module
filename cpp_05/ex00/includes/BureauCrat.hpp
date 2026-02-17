@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BureauCrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 15:52:11 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/16 14:48:17 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/17 14:02:58 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,12 @@ class BureauCrat {
         class GradeTooHighException: public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return "Grade is inferior to 1";
-                }
+                const char* what() const throw();
         };
         class GradeTooLowException: public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return "Grade is superior to 150";
-                }
+                const char* what() const throw();
         };
 
         std::string	getName() const;
