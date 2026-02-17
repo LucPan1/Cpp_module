@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:22:58 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/13 12:44:14 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/17 15:09:51 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int main()
 {
     try 
     {
-        BureauCrat bureau;
-        Form form;
+        // BureauCrat bureau;
+        // Form form;
 
-        form.signForm(bureau, form);
+        // form.signForm(bureau, form);
     }
     catch (std::exception & e)
     {

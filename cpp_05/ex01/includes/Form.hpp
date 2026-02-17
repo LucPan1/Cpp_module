@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:30:01 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/13 12:48:32 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/17 15:15:41 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@
 #include <string>
 #include <exception>
 
+class BureauCrat;
+
 class Form {
 
     public:
         Form();
+        Form(const std::string name, int gradeSign, int gradeExecute);
         Form(const Form& other);
         Form &operator=(const Form& other);
         ~Form();
@@ -48,8 +51,7 @@ class Form {
 		int 		getGradesSign() const;
 		int 		getGradesExec() const;
 
-		bool	beSigned(BureauCrat grade);
-		bool	signForm(BureauCrat &bureau, Form form);
+		void        beSigned(const BureauCrat &grade);
 
     private:
         const std::string	_name;

@@ -3,18 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/13 15:16:12 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/17 15:13:36 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): _name("fizz"), _is_signed(false), _grades_sign(75), _grades_exec(75)
+Form::Form(): _name("default"), _is_signed(false), _grades_sign(150), _grades_exec(150)
 {
     std::cout << "Form Default Constructor called" << std::endl;
+    return;
+}
+
+Form::Form(const std::string name, int gradeSign, int gradeExecute): _name(name), _is_signed(false), _grades_sign(gradeSign), _grades_exec(gradeExecute)
+{
+    if (_grades_sign < 1 || _grades_exec < 1)
+        throw GradeTooHighException();
+    if (_grades_sign > 150 || _grades_exec > 150)
+        throw GradeTooLowException();
+    // std::cout << "Form Copy Constructor called" << std::endl;
     return;
 }
 
@@ -59,31 +69,16 @@ int		Form::getGradesExec() const
     return (this->_grades_exec);
 }
 
-bool	Form::beSigned(BureauCrat grade)
+void	Form::beSigned(const BureauCrat &grade)
 {
-    if (grade.getGrade() > 150)
-        throw Form::GradeTooLowException();
-    else if (grade.getGrade() < 1)
-        throw Form::GradeTooHighException();
-	else if (grade.getGrade() < this->_grades_sign && grade.getGrade() < this->_grades_exec)
-    {
-		this->_is_signed = true;
-        return (true);
-    }
-	return (false);
-}
-
-bool	Form::signForm(BureauCrat &bureau, Form form)
-{
-	if (Form::beSigned(bureau))
-		std::cout << bureau << " signed " << form << std::endl;
+	if (grade.getGrade() <= _grades_sign)
+		_is_signed = true;
 	else
-		std::cout << bureau << " couldn't sign " << form << " because the grade is not high enough" << std::endl;
-	return (0);
+        throw GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &out, const Form &form)
 {
-    out << form.getName() << " signed " << form.getSigned() << ", required sign is " << form.getGradesSign() << " and the grade execute is " << form.getGradesExec();
+    out << form.getName() << " is signed " << form.getSigned() << ", required sign is " << form.getGradesSign() << " and the grade execute is " << form.getGradesExec();
     return (out);
 }
