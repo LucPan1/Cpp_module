@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:30:01 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/17 15:15:41 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/18 12:38:47 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,12 @@ class Form {
         class GradeTooHighException: public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return "Grade is inferior to 1";
-                }
+                const char* what() const throw();
         };
         class GradeTooLowException: public std::exception
         {
             public:
-                virtual const char* what() const throw()
-                {
-                    return "Grade is superior to 150";
-                }
+                const char* what() const throw();
         };
 
 		std::string	getName() const;

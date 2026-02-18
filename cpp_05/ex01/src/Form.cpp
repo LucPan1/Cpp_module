@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/17 15:13:36 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/18 12:51:15 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,16 @@ int		Form::getGradesExec() const
     return (this->_grades_exec);
 }
 
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return "Grade is too low";
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return "Grade is too high";
+}
+
 void	Form::beSigned(const BureauCrat &grade)
 {
 	if (grade.getGrade() <= _grades_sign)
@@ -79,6 +89,10 @@ void	Form::beSigned(const BureauCrat &grade)
 
 std::ostream &operator<<(std::ostream &out, const Form &form)
 {
-    out << form.getName() << " is signed " << form.getSigned() << ", required sign is " << form.getGradesSign() << " and the grade execute is " << form.getGradesExec();
+    out << form.getName() 
+        << " is signed " << form.getSigned() 
+        << ", required sign is " << form.getGradesSign() 
+        << " and the grade execute is " << form.getGradesExec()
+        << std::endl;
     return (out);
 }
