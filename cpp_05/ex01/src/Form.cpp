@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
+/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:29:59 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/18 12:51:15 by lupan            ###   ########.fr       */
+/*   Updated: 2026/02/18 22:32:46 by luc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Form &Form::operator=(const Form& other)
 
 Form::~Form()
 {
-    std::cout << "Form Destructor called" << std::endl;
+    // std::cout << "Form Destructor called" << std::endl;
     return;
 }
 
