@@ -2,6 +2,7 @@
 # define AAForm_HPP
 
 #include "BureauCrat.hpp"
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <exception>
