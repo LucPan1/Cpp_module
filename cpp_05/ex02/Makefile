@@ -1,11 +1,11 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I./includes
 
-NAME = Form
+NAME = 28B
 SRC_DIR = src
 
 SRC = $(SRC_DIR)/main.cpp \
-	  $(SRC_DIR)/BureauCrat.cpp \
+	  $(SRC_DIR)/Bureaucrat.cpp \
 	  $(SRC_DIR)/AForm.cpp \
 	  $(SRC_DIR)/PresidentialPardonForm.cpp \
 	  $(SRC_DIR)/RobotomyRequestForm.cpp \

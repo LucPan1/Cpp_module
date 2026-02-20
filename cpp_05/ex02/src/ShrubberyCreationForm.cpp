@@ -8,13 +8,27 @@ ShrubberyCreationForm::ShrubberyCreationForm(): _grades_sign(145), _grades_exec(
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): _grades_sign(145), _grades_exec(137)
 {
-    std::fstream filein;
-	std::ofstream out_file;
+    std::fstream	filein;
+	std::ofstream	out_file;
+	std::string		line;
+	int				rows = 24;
 
 	out_file.open((std::string(target) + "_shrubbery").c_str(), std::ios::out);
 	if (out_file.fail())
 		return;
-    // out_file << tree.c_str() << std::endl;
+    for (int i = 0; i < rows - 1; i++)
+	{
+        for (int j = rows - 1; j > 1; j--)
+        {
+            if (i >= j)
+                out_file << " *";
+            else
+                out_file << " ";
+        }
+        out_file << std::endl;
+	}
+	out_file.close();
+	filein.close();
     // std::cout << "ShrubberyCreationForm Parameterized Constructor called" << std::endl;
     return;
 }

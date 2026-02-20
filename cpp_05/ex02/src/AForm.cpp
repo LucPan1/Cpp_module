@@ -67,7 +67,7 @@ const char* AForm::GradeTooHighException::what() const throw()
     return "Grade is too high";
 }
 
-void	AForm::beSigned(const BureauCrat &grade)
+void	AForm::beSigned(const Bureaucrat &grade)
 {
 	if (grade.getGrade() <= _grades_sign)
 		_is_signed = true;

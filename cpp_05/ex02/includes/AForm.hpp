@@ -1,13 +1,14 @@
-#ifndef AAForm_HPP
-# define AAForm_HPP
+#ifndef AForm_HPP
+# define AForm_HPP
 
-#include "BureauCrat.hpp"
+#include "Bureaucrat.hpp"
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <exception>
+#include <stdlib.h>
 
-class BureauCrat;
+class Bureaucrat;
 
 class AForm {
 
@@ -34,7 +35,7 @@ class AForm {
 		int 		getGradesSign() const;
 		int 		getGradesExec() const;
 
-		void        beSigned(const BureauCrat &grade);
+		void        beSigned(const Bureaucrat &grade);
 
     private:
         const std::string	_name;
