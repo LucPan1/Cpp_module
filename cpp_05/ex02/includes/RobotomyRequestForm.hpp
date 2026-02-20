@@ -12,9 +12,11 @@ class RobotomyRequestForm: public AForm {
         RobotomyRequestForm &operator=(const RobotomyRequestForm& other);
         ~RobotomyRequestForm();
 
+        void    executeAction() const;
+
+        std::string getTarget() const;
+
     private:
-        const int   _grades_sign;
-        const int   _grades_exec;
         std::string _target;
 };
 

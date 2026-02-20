@@ -11,10 +11,12 @@ class ShrubberyCreationForm: public AForm {
         ShrubberyCreationForm(const ShrubberyCreationForm& other);
         ShrubberyCreationForm &operator=(const ShrubberyCreationForm& other);
         ~ShrubberyCreationForm();
+
+        void    executeAction() const;
+
+        std::string getTarget() const;
     
     private:
-        const int   _grades_sign;
-        const int   _grades_exec;
         std::string _target;
 };
 

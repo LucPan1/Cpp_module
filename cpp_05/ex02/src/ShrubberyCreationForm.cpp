@@ -1,19 +1,52 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(): _grades_sign(145), _grades_exec(137)
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("RobotomyRequestForm", 145, 137), _target("home")
 {
     std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
     return;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): _grades_sign(145), _grades_exec(137)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): AForm("RobotomyRequestForm", 145, 137), _target(target)
 {
-    std::fstream	filein;
+    // std::cout << "ShrubberyCreationForm Parameterized Constructor called" << std::endl;
+    return;
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other): AForm(other), _target(other._target)
+{
+    // std::cout << "ShrubberyCreationForm Copy Constructor called" << std::endl;
+    return;
+}
+
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
+{
+    if (this != &other) {
+        AForm::operator=(other);
+        _target = other._target;
+    }
+    // std::cout << "ShrubberyCreationForm Copy Assignment Operator called" << std::endl;
+    return (*this);
+}
+
+ShrubberyCreationForm::~ShrubberyCreationForm()
+{
+    // std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
+    return;
+}
+
+std::string ShrubberyCreationForm::getTarget() const
+{
+    return (_target);
+}
+
+void   ShrubberyCreationForm::executeAction() const
+{
+	std::fstream	filein;
 	std::ofstream	out_file;
 	std::string		line;
 	int				rows = 24;
 
-	out_file.open((std::string(target) + "_shrubbery").c_str(), std::ios::out);
+	out_file.open((std::string(_target) + "_shrubbery").c_str(), std::ios::out);
 	if (out_file.fail())
 		return;
     for (int i = 0; i < rows - 1; i++)
@@ -27,29 +60,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): _grades
         }
         out_file << std::endl;
 	}
+	std::cout << "Successfuly created the file" << std::endl;
 	out_file.close();
 	filein.close();
-    // std::cout << "ShrubberyCreationForm Parameterized Constructor called" << std::endl;
-    return;
-}
-
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other): _grades_sign(other._grades_sign), _grades_exec(other._grades_exec)
-{
-    // std::cout << "ShrubberyCreationForm Copy Constructor called" << std::endl;
-    return;
-}
-
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
-{
-    if (this != &other) {
-        return (*this);
-    }
-    // std::cout << "ShrubberyCreationForm Copy Assignment Operator called" << std::endl;
-    return (*this);
-}
-
-ShrubberyCreationForm::~ShrubberyCreationForm()
-{
-    std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
-    return;
 }

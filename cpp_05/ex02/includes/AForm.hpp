@@ -29,6 +29,11 @@ class AForm {
             public:
                 const char* what() const throw();
         };
+        class FormNotSignedException: public std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
 
 		std::string	getName() const;
 		bool 		getSigned() const;
@@ -37,7 +42,8 @@ class AForm {
 
 		void        beSigned(const Bureaucrat &grade);
 
-        void		execute(Bureaucrat const & executor) const;
+        virtual void		execute(Bureaucrat const & executor) const;
+        virtual void		executeAction() const = 0;
 
     private:
         const std::string	_name;
