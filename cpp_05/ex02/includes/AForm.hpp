@@ -37,6 +37,8 @@ class AForm {
 
 		void        beSigned(const Bureaucrat &grade);
 
+        void		execute(Bureaucrat const & executor) const;
+
     private:
         const std::string	_name;
         bool				_is_signed;

@@ -11,6 +11,8 @@ class PresidentialPardonForm: public AForm {
         PresidentialPardonForm(const PresidentialPardonForm& other);
         PresidentialPardonForm &operator=(const PresidentialPardonForm& other);
         ~PresidentialPardonForm();
+
+        void    execute(Bureaucrat const & executor) const;
     
     private:
         const int   _grades_sign;

@@ -33,3 +33,9 @@ PresidentialPardonForm::~PresidentialPardonForm()
     std::cout << "PresidentialPardonForm Destructor called" << std::endl;
     return;
 }
+
+void   PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+	if (executor.getGrade() > _grades_exec)
+		throw GradeTooLowException();
+}
