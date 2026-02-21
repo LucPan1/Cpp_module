@@ -23,11 +23,13 @@ int main()
         }
         catch (std::exception & e)
         {
+            delete (rrf);
             std::cerr << "Catch exception: " << e.what() << std::endl;
         }
     }
     else
         std::cerr << "Form creation failed" << std::endl;
+    delete (rrf);
     std::cout << std::endl;
 
     const char* forms[] = {"create shrubbery", "robotomy request", "presidential pardon"};
@@ -43,9 +45,12 @@ int main()
             chief.executeForm(*form);
         }
         else
+        {
             std::cerr << "Form creation failed" << std::endl;
+        }
         if (i != 2)
             std::cout << std::endl;
+        delete (form);
     }
     return (0);
 }
