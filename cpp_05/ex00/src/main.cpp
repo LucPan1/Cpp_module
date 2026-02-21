@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luc <luc@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: lupan <lupan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:22:58 by lupan             #+#    #+#             */
-/*   Updated: 2026/02/17 14:36:11 by luc              ###   ########.fr       */
+/*   Updated: 2026/02/21 12:55:24 by lupan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int main()
     }
     catch (std::exception & e)
     {
+        delete (bureau);
+        bureau = NULL;
         std::cerr << "Catch exception: " << e.what() << std::endl; 
     }
 
