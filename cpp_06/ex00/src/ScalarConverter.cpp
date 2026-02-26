@@ -1,29 +1,22 @@
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter()
+void ScalarConverter::convert(std::string literal)
 {
-    std::cout << "ScalarConverter Default Constructor called" << std::endl;
-    return;
-}
+    char lit;
+    int num;
+    float deci;
+    double d;
+    char *end;
 
-ScalarConverter::ScalarConverter(const ScalarConverter& other)
-{
-    // std::cout << "ScalarConverter Copy Constructor called" << std::endl;
-    return;
-}
-
-ScalarConverter &ScalarConverter::operator=(const ScalarConverter& other)
-{
-    if (this != &other) {
-        // _grades = other._grades;
-        // return (*this);
-    }
-    // std::cout << "ScalarConverter Copy Assignment Operator called" << std::endl;
-    return (*this);
-}
-
-ScalarConverter::~ScalarConverter()
-{
-    // std::cout << "ScalarConverter Destructor called" << std::endl;
+    lit = *literal.c_str();
+    num = std::atoi(literal.c_str());
+    deci = std::atof(literal.c_str());
+    d = std::strtod(literal.c_str(), &end);
+    if ((lit >= 'a' && lit <= 'z') || (lit >= 'A' && lit <= 'Z'))
+        std::cout << "char: " << lit << std::endl;
+    else if (lit >= '0' && lit <= '9')
+        std::cout << "char: " << "Non displayable" << std::endl;
+    else
+        std::cout << "char: " << "Impossible" << std::endl;
     return;
 }

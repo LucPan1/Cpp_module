@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I./includes
 
-NAME = BureauCrat
+NAME = convert
 SRC_DIR = src
 
 SRC = $(SRC_DIR)/main.cpp \
