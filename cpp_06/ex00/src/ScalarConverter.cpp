@@ -31,15 +31,29 @@ void ScalarConverter::convert(std::string literal)
             std::cout << "char: " << "impossible" << std::endl;
         else
             std::cout << "char: " << lit << std::endl;
-        if ((num < '0' || num > '9') && num != '-')
-        {
-            std::cout << num << std::endl;
-            std::cout << "int: impossible" << std::endl;
-        }
-        else
+        if ((num >= '0' && num <= '9'))
             std::cout << "int: " << num << std::endl;
+        else 
+            std::cout << "int: impossible" << std::endl;
+		// std::cout << "float: " << deci << std::endl;
+
+		std::cout << "deci: " << typeid(deci).name() << std::endl; 
+		// if (deci >= '0' && deci <= '9')
+		// {
+			std::cout << "float: " << deci << std::endl; 
+
+			// for (int i = 0; i < n; i++)
+			// {
+			// 	if (i == n - 1)
+			// 		std::cout << "float: " << literal.insert(i + 1, ".0f") << std::endl;
+			// }
+			// std::cout << "hello" << std::endl;
+		// }
+		// else
+		// 	std::cout << "float: nanf" << std::endl; 
+		// if (deci >= '0' && deci <= '9')
+
     }
-    // else if ()
 
     return;
 }
