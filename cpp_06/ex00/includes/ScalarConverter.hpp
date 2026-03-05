@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <cstdlib>
 #include <typeinfo>
 
 class ScalarConverter {
 
     public:
-        static void convert(std::string literal);
+        static void convert(const char *literal);
 
 };
 

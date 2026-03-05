@@ -1,46 +1,52 @@
 #include "ScalarConverter.hpp"
 
-void ScalarConverter::convert(std::string literal)
+void ScalarConverter::convert(const char *literal)
 {
-    char lit;
+    char *lit;
     int num;
-    float deci;
-    double d;
-    char *end;
+    // float deci;
+    // double d;
+    // char *end;
     bool verif = false;
 
-    lit = *literal.c_str();
-    num = std::atoi(literal.c_str());
-    deci = std::atof(literal.c_str());
-    d = std::strtod(literal.c_str(), &end);
-    int n = literal.length();
+    lit = const_cast<char *>(literal);
+
+    num = std::atoi(literal);
+    // deci = std::atof(literal.c_str());
+    // d = std::strtod(literal.c_str(), &end);
+    int n = strlen(literal);
     for (int i = 0; i < n; i++)
     {
         if (literal[i] == '.')
         {
             std::cout << "char: " << "\'*\'" << std::endl;
-            std::cout << "int: " << literal.erase(i) << std::endl;
+            // std::cout << "int: " << literal.erase(i) << std::endl;
             verif = true;
         }
     }
     if (verif == false)
     {
-        if (lit >= '0' && lit <= '9')
+        if (*lit >= '0' && *lit <= '9')
             std::cout << "char: " << "Non displayable" << std::endl;
-        else if (n > 1 || ((lit < 97 || lit > 122) && (lit < 65 || lit > 90)))
-            std::cout << "char: " << "impossible" << std::endl;
+        else if (n > 1 || ((*lit < 97 || *lit > 122) && (*lit < 65 || *lit > 90)))
+            std::cout << "char: impossible" << std::endl;
         else
             std::cout << "char: " << lit << std::endl;
-        if ((num >= '0' && num <= '9'))
+        // if (!num && num != 0)
+        //     std::cout << "int: impossible" << std::endl;
+        // else 
+        //     std::cout << "int: " << num << std::endl;
+
+        if (num >= 0 && num <= 9)
             std::cout << "int: " << num << std::endl;
         else 
             std::cout << "int: impossible" << std::endl;
 		// std::cout << "float: " << deci << std::endl;
 
-		std::cout << "deci: " << typeid(deci).name() << std::endl; 
+		// std::cout << "deci: " << typeid(deci).name() << std::endl;
 		// if (deci >= '0' && deci <= '9')
 		// {
-			std::cout << "float: " << deci << std::endl; 
+			// std::cout << "float: " << deci << std::endl; 
 
 			// for (int i = 0; i < n; i++)
 			// {
