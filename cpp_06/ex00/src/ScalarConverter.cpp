@@ -15,12 +15,13 @@ void ScalarConverter::convert(const char *literal)
     // deci = std::atof(literal.c_str());
     // d = std::strtod(literal.c_str(), &end);
     int n = strlen(literal);
+	std::string str = lit;
     for (int i = 0; i < n; i++)
     {
-        if (literal[i] == '.')
+        if (lit[i] == '.')
         {
             std::cout << "char: " << "\'*\'" << std::endl;
-            // std::cout << "int: " << literal.erase(i) << std::endl;
+            std::cout << "int: " << str.erase(i) << std::endl;
             verif = true;
         }
     }
@@ -37,10 +38,15 @@ void ScalarConverter::convert(const char *literal)
         // else 
         //     std::cout << "int: " << num << std::endl;
 
-        if (num >= 0 && num <= 9)
-            std::cout << "int: " << num << std::endl;
-        else 
+        for (int i = 0; i < n; i++)
+        {
+            if (literal[i] >= '0' && literal[i] <= '9')
+                std::cout << "int: impossible" << std::endl;
+        }
+        if (literal)
             std::cout << "int: impossible" << std::endl;
+        else 
+            std::cout << "int: " << num << std::endl;
 		// std::cout << "float: " << deci << std::endl;
 
 		// std::cout << "deci: " << typeid(deci).name() << std::endl;
@@ -61,5 +67,5 @@ void ScalarConverter::convert(const char *literal)
 
     }
 
-    return;
+    // return;
 }
