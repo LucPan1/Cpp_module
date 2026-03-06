@@ -1,21 +1,73 @@
 #include "ScalarConverter.hpp"
 
-void ScalarConverter::convert(const char *literal)
+ScalarConverter::ScalarConverter()
+{
+    std::cout << "ScalarConverter Default Constructor called" << std::endl;
+    return;
+}
+
+ScalarConverter::ScalarConverter(const ScalarConverter& other)
+{
+    // std::cout << "ScalarConverter Copy Constructor called" << std::endl;
+    *this = other;
+    return;
+}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter& other)
+{
+    // std::cout << "ScalarConverter Copy Assignment Operator called" << std::endl;
+    return (*this);
+}
+
+ScalarConverter::~ScalarConverter()
+{
+    // std::cout << "ScalarConverter Destructor called" << std::endl;
+    return;
+}
+
+void ScalarConverter::convert(const std::string& literal)
 {
     char *lit;
     int num;
     float deci;
     double d;
-    // char *end;
+    char *end;
     bool verif = false;
 
-    lit = const_cast<char *>(literal);
+    
+    if (literal == "-inf" || literal == "-inff")
+    {
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: impossible" << std::endl;
+        std::cout << "float: +inff" << std::endl;
+        std::cout << "double: +inf" << std::endl;
+        return;
+    }
 
-    num = std::atoi(literal);
-    deci = std::atof(literal);
+    if (literal == "+inf" || literal == "+inff" || literal == "inf" || literal == "inff")
+    {
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: impossible" << std::endl;
+        std::cout << "float: +inff" << std::endl;
+        std::cout << "double: +inf" << std::endl;
+        return;
+    }
+    
+    if (literal == "nan" || literal == "nanf")
+    {
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: impossible" << std::endl;
+        std::cout << "float: nanf" << std::endl;
+        std::cout << "double: nan" << std::endl;
+        return;
+    }
 
-    d = std::strtod(literal, NULL);
-    int n = strlen(literal);
+    lit = const_cast<char *>(literal.c_str());
+    num = std::atoi(literal.c_str());
+    deci = std::atof(literal.c_str());
+
+    d = std::strtod(literal.c_str(), NULL);
+    int n = strlen(literal.c_str());
 	std::string str = lit;
     for (int i = 0; i < n; i++)
     {
