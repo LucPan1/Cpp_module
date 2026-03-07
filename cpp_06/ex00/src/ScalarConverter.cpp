@@ -63,6 +63,7 @@ void ScalarConverter::convert(const std::string& literal)
         return;
     }
 
+    // check char
     if (literal.length() == 1 && !std::isdigit(literal[0]) && std::isprint(literal[0]))
     {
         char c = literal[0];
@@ -73,6 +74,7 @@ void ScalarConverter::convert(const std::string& literal)
         return;
     }
 
+    // check int 
     long int i = std::strtol(literal.c_str(), &end, 10);
     if (*end == '\0' && (i >= INT_MIN && i <= INT_MAX))
     {
@@ -85,6 +87,32 @@ void ScalarConverter::convert(const std::string& literal)
         std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(i) << std::endl;
         return;
     }
+
+    // check float
+    float f = std::strtof(literal.c_str(), &end);
+    if (*end == 'f' || *end == 'F' && *(end + 1) == '\0')
+    {
+        std::cout << "char: ";
+
+        if (std::isdigit(static_cast<int>(f)))
+            std::cout << "\'" << static_cast<char>(f) << "\'" << std::endl;
+        
+        std::cout << "int: ";
+        if (f >= static_cast<float>(INT_MIN) && f <= static_cast<float>(INT_MAX))
+            std::cout << static_cast<int>(f) << std::endl;
+        else
+            std::cout << "impossible" << std::endl;
+        
+        std::cout << "float: ";
+        if (f > static_cast<float>(FLT_MAX) && f < static_cast<float>(-FLT_MAX))
+            std::cout << "impossible" << std::endl;
+        else
+            std::cout << std::fixed << std::setprecision(1) << static_cast<double>(f) << std::endl;
+        return;
+    }
+
+    // check double
+
     // lit = const_cast<char *>(literal.c_str());
     // num = std::atoi(literal.c_str());
     // deci = std::atof(literal.c_str());
