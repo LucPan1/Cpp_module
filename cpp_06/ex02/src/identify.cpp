@@ -54,9 +54,3 @@ void identify(Base& p)
     }
     
 }
-
-// void identify(Base* p)
-// {
-//     Base *ptrBase = dynamic_cast<Base*>(p);
-//     std::cout << ptrBase << std::endl;
-// }
