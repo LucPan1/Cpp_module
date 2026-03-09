@@ -8,8 +8,7 @@ int main(int ac, char **av)
         std::cout << "Wrong number of arguments output" << std::endl;
         return (0);
     }
-    ScalarConverter scal;
+    ScalarConverter::convert(av[1]);
 
-    scal.convert(av[1]);
     return (0);
 }
