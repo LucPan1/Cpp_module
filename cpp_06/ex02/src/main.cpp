@@ -7,7 +7,9 @@
 
 int main()
 {
-    for (int i = 0; i < 10; i++)
+    srand(time(NULL));
+
+    for (int i = 0; i < 3; i++)
     {
         Base *base = generate();
 
