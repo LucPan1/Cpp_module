@@ -70,7 +70,7 @@ void ScalarConverter::convert(const std::string& literal)
 
     // check int 
     long int i = std::strtol(literal.c_str(), &end, 10);
-    if (*end == '\0' && (i >= INT_MIN && i <= INT_MAX))
+    if (*end == '\0' && (i >= std::numeric_limits<int>::min() && i <= std::numeric_limits<int>::min()))
     {
         if (i >= 0 && i <= 127)
         {
@@ -103,7 +103,7 @@ void ScalarConverter::convert(const std::string& literal)
             std::cout << "impossible" << std::endl;
         
         std::cout << "int: ";
-        if (f >= INT_MIN && f <= INT_MAX)
+        if (f >= std::numeric_limits<int>::min() && f <= std::numeric_limits<int>::max())
             std::cout << static_cast<int>(f) << std::endl;
         else
             std::cout << "impossible" << std::endl;
@@ -135,7 +135,7 @@ void ScalarConverter::convert(const std::string& literal)
             std::cout << "impossible" << std::endl;
         
         std::cout << "int: ";
-        if (d >= INT_MIN && d <= INT_MAX)
+        if (d >= std::numeric_limits<int>::min() && d <= std::numeric_limits<int>::max())
             std::cout << static_cast<int>(d) << std::endl;
         else
             std::cout << "impossible" << std::endl;
