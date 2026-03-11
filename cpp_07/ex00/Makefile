@@ -4,8 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I./includes
 NAME = templates
 SRC_DIR = src
 
-SRC = $(SRC_DIR)/main.cpp \
-	  $(SRC_DIR)/whatever.cpp 
+SRC = $(SRC_DIR)/main.cpp 
 
 OBJS = $(SRC:.cpp=.o)
 
