@@ -3,19 +3,19 @@
 
 #include <iostream>
 
-template <typename T, size_t length>
-void	it()
+template <typename T>
+void	increment(int x)
 {
-	for (int i = 0; i < )
+	arr[i] += 1;
 }
 
-template <class T, size_t length, typename F>
-void    iter(typename &array<T>, size_t length, F& it)
-{
-    T sum;
+// void print()
 
-    for (auto it = length.first; it < length.second; it++) {
-        sum += *it;
+template <typename T, typename F>
+void    iter(T array[], const size_t length, F func)
+{
+    for (size_t i = 0; i < length; i++) {
+        func(array[i]);
     }
 };
 
