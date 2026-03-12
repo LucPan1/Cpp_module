@@ -1,18 +1,9 @@
-#include "Whatever.hpp"
+#include "Iter.hpp"
 
 int main()
 {
-    int a = 2;
-    int b = 3;
-    ::swap( a, b );
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-    std::string c = "chaine1";
-    std::string d = "chaine2";
-    ::swap(c, d);
-    std::cout << "c = " << c << ", d = " << d << std::endl;
-    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+    int array[] = { 1, 2, 3 };
+    size_t n = 3;
+    // ::iter(array, n, F())
     return (0);
 }

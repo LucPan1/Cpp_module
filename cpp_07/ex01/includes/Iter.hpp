@@ -1,22 +1,22 @@
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
 
 #include <iostream>
 
-template <typename T>
-void	swap(T &a, T &b)
+template <typename T, size_t length>
+void	it()
 {
-    T temp;
-
-    temp = a;
-    a = b;
-    b = temp;
+	for (int i = 0; i < )
 }
 
-// template <typename T, int length>
-// void    iter(&array[], length, array[i])
-// {
-//     std::cout << "hello"
-// }
+template <class T, size_t length, typename F>
+void    iter(typename &array<T>, size_t length, F& it)
+{
+    T sum;
+
+    for (auto it = length.first; it < length.second; it++) {
+        sum += *it;
+    }
+};
 
 #endif
