@@ -2,17 +2,22 @@
 # define ITER_HPP
 
 #include <iostream>
+#include <string>
 
 template <typename T>
-void	increment(int x)
+void	increment(T& x)
 {
-	arr[i] += 1;
+	x += 1;
 }
 
-// void print()
+template <typename T>
+void printElement(const T& x)
+{
+    std::cout << x << std::endl;
+}
 
 template <typename T, typename F>
-void    iter(T array[], const size_t length, F func)
+void    iter(T *array, const size_t length, F func)
 {
     for (size_t i = 0; i < length; i++) {
         func(array[i]);
