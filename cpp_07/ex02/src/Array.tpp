@@ -7,14 +7,14 @@ Array<T>::Array(): _elements(NULL), _size(0)
 }
 
 template <typename T>
-Array<T>::Array(unsigned int n)
+Array<T>::Array(unsigned int n): _elements(new T[n]), _size(n)
 {
     for (unsigned int i = 0; i < n; i++)
-        _elements[i] = 0;
+        _elements[i] = T();
 }
 
 template <typename T>
-Array<T>::Array(const Array<T> &other): _size(other._size)
+Array<T>::Array(const Array<T> &other): _elements(NULL), _size(other._size)
 {
     _elements = new T[_size];
     for (unsigned int i = 0; i < _size; i++)
@@ -45,18 +45,11 @@ Array<T>::~Array()
 }
 
 template <typename T>
-Array<T> &Array<T>::operator[](int index)
+T &Array<T>::operator[](unsigned int index)
 {
-    try
-    {
-        if (index > size())
-            throw std::exception();
-        return _elements[index];
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    if (index >= size())
+        throw OutOfBoundsException();
+    return _elements[index];
 }
 
 template <typename T>

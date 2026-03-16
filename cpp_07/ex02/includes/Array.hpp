@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <exception>
 
 template <typename T>
 class Array {
@@ -13,15 +14,24 @@ class Array {
         Array(const Array& other);
         Array &operator=(const Array& other);
         ~Array();
-        Array &operator[](int index);
+        T &operator[](unsigned int index);
 
 		unsigned int size() const;
+
+        class OutOfBoundsException: public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {
+                    return ("Index is out of bounds");
+                }
+        };
 
     private:
 		T *_elements;
         unsigned int _size;
 };
 
-#include "../includes/Array.hpp"
+#include "../src/Array.tpp"
 
 #endif
