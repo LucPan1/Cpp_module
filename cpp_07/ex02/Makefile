@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I./includes
 
-NAME = templates
+NAME = array
 SRC_DIR = src
 
 SRC = $(SRC_DIR)/main.cpp
