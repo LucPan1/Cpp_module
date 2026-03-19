@@ -2,6 +2,8 @@
 #define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
 #include <array>
 
 template <typename T>
@@ -9,7 +11,7 @@ class Easyfind {
 
     public:
         Easyfind();
-        Easyfind(T& a, int i);
+        Easyfind(std::vector<T>& a, int i);
         Easyfind(const Easyfind& other);
         Easyfind &operator=(const Easyfind& other);
         ~Easyfind();

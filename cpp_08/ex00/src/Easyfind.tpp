@@ -7,14 +7,14 @@ Easyfind<T>::Easyfind()
 }
 
 template <typename T>
-Easyfind<T>::Easyfind(T& a, int i)
+Easyfind<T>::Easyfind(std::vector<T>& a, int i)
 {
     try
     {
-        int res = a.find(i);
-        if (res != string::npos)
+        int res = std::find(a.begin(), a.end(), i);
+        if (res != a.end())
         {
-            std::cout << res 
+            std::cout << res;
         }
     }
     catch(const std::exception& e)
@@ -44,5 +44,5 @@ Easyfind<T> &Easyfind<T>::operator=(const Easyfind<T> &other)
 template <typename T>
 Easyfind<T>::~Easyfind()
 {
-    delete[] _elements;
+    return;
 }
