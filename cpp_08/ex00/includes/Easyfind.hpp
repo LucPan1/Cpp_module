@@ -4,19 +4,16 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <array>
+#include <deque>
+#include <exception>
 
 template <typename T>
-class Easyfind {
-
-    public:
-        Easyfind();
-        Easyfind(std::vector<T>& a, int i);
-        Easyfind(const Easyfind& other);
-        Easyfind &operator=(const Easyfind& other);
-        ~Easyfind();
-};
-
-#include "../src/Easyfind.tpp"
+typename T::iterator easyfind(T& a, int i)
+{
+    typename T::iterator it = std::find(a.begin(), a.end(), i);
+    if (it == a.end())
+        throw std::exception();
+    return (it);
+}
 
 #endif
