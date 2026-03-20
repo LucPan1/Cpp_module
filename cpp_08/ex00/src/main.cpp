@@ -6,7 +6,13 @@ int main()
     std::vector<int> a(arr, arr + sizeof(arr) / sizeof(int));
     try
     {
-        easyfind(a, 3);
+        std::vector<int>::iterator v = easyfind(a, 3);
+		std::cout << *v << std::endl;
+		// for (std::vector<int>::iterator it = a.begin(); it != a.end(); ++it)
+		// {
+		// 	std::cout << *it << std::endl;
+		// }
+
     }
     catch(const std::exception& e)
     {
