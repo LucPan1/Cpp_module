@@ -41,3 +41,10 @@ Span<T>::~Span()
 {
     return;
 }
+
+template <typename T>
+void	Span<T>::addNumber()
+{
+	
+	return;
+}
