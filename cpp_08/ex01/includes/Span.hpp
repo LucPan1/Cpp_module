@@ -1,5 +1,5 @@
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <iostream>
 #include <algorithm>
@@ -12,17 +12,26 @@ class Span {
 
 	public:
 		Span();
-		Span(unsigned int N);;
+		Span(unsigned int N);
         Span(const Span& other);
         Span &operator=(const Span& other);
         ~Span();
 
-		void	addNumber();
+		std::vector<T>	addNumber(T number);
 		void	shortestSpan();
 		void	longestSpan();
+
+		class FullElementsException: public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {
+                    return ("The number of elements is full");
+                }
+        };
 	
 	private:
-		T *_arr;
+		std::vector<T> _arr;
 		unsigned int _N;
 };
 
